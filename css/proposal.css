@@ -1,0 +1,16 @@
+h1 {
+    background-color: purple;
+    color: white;
+    font-family:'Helvetica', Courier, monospace;
+}
+
+header {
+    padding: .5rem;
+}
+  
+section {
+    margin: .5rem 0;
+    padding: .5rem;
+    border: 2px solid purple;
+}
+  
