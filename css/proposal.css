@@ -4,6 +4,11 @@ h1 {
     font-family:'Helvetica', Courier, monospace;
 }
 
+h2 {
+    background-color: #CBC3E3;
+    font-family: 'Helvetica', Courier, monospace;
+}
+
 header {
     padding: .5rem;
 }
