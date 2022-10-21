@@ -1,3 +1,8 @@
+* { 
+  margin:0;
+  padding:0;
+}
+
 footer p {
   margin: 0;
   padding-left: 1rem;
@@ -7,7 +12,7 @@ footer p {
 footer {
   padding-top: 1rem;
   padding-bottom: 1rem;
-  background-color: rebeccapurple;
+  background-color: #483d8b;
   text-align: left;
   width: 100%;
   position: fixed;
