@@ -1,1 +1,17 @@
+footer p {
+    margin: 0;
 
+    color: white;
+}
+
+footer {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    background-color: rebeccapurple;
+    text-align: center;
+
+    position: relative;
+  /* negative value of footer height */
+  height: 180px;
+  clear: both;
+}
