@@ -157,3 +157,53 @@ div#container {
 }
 
 /* ------------------------------- END OF POST PAGE---------------------------------- */
+
+header.major-page {
+  background-color: #483d8b;
+  font-size: 32px;
+  color: white;
+  text-align: center;
+}
+
+
+.input-group {
+  margin: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+nav#major {
+  color: white;
+  background-color: #483d8b;
+  padding: 0.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid rgb(255, 255, 255);
+}
+
+nav#major ul {
+  padding: 0;
+  margin: 0;
+}
+
+nav#major a {
+  text-decoration: none;
+  color: white;
+}
+
+nav#major li {
+  display: inline;
+  margin: 0 1rem;
+}
+
+#info a, #eng a {
+  color: #483d8b;
+}
+
+#info {
+  flex: 50%;
+}
+
+#eng {
+  flex: 50%;
+}
