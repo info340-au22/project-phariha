@@ -253,7 +253,7 @@ nav#major li {
   -moz-animation: fadeIn ease 10s;
   -o-animation: fadeIn ease 10s;
   -ms-animation: fadeIn ease 10s;
-}
+/* }
 
 @keyframes fadeIn {
   0% {
@@ -298,7 +298,7 @@ nav#major li {
   100% {
     opacity:1;
   }
-}
+} */
 
 .home h2 {
   text-align: center;
