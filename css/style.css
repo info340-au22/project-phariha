@@ -24,7 +24,7 @@ footer {
 
 /* -------------------------- Elizabeth's Interactive Page -------------------*/
 .interact-h1 {
-  margin-top: 7rem;
+  margin-top: 1rem;
   margin-left: 1rem;
 }
 
@@ -39,9 +39,8 @@ div#container {
   margin-left: 2rem;
 }
 
-.interact-nav {
+nav {
   background-color: #483d8b;
-  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
@@ -49,23 +48,23 @@ div#container {
   padding-top: 1rem;
 }
 
-.interact-nav a:link {
+nav a:link {
   text-decoration: none;
   font-size: medium;
 }
 
-.interact-nav a {
+nav a {
   color: white;
 }
 
-.interact-nav a:link:hover {
+nav a:link:hover {
   color: white;
   border-bottom: solid;
   border-bottom-color: #f0f0f0;
   border-bottom-width: 0.1rem;
 }
 
-.interact-nav li {
+nav li {
   display: inline;
   margin: 0 1rem;
 
@@ -118,10 +117,7 @@ div#container {
 
 /* ------------------------------- MALENA: POST PAGE---------------------------------- */
 /* navagation bar */
-#post nav {
-  background-color: rebeccapurple;
-  color: white;
-}
+
 
 #post .fa.fa-bars {
   color: white;
@@ -137,7 +133,7 @@ div#container {
 }
 
 #post button {
-  background-color: rebeccapurple;
+  background-color: #483d8b;
   color: white;
 }
 
@@ -151,7 +147,7 @@ div#container {
 
 #post .fa.fa-filter {
   float: right;
-  color: rebeccapurple;
+  color: #483d8b;
   font-size: 1.5rem;
 }
 
