@@ -208,7 +208,7 @@ nav#major li {
 /* -------------------------- GABRIELLA'S HOME PAGE -------------------*/
 
 .home body {
-  font-family: "Lexend";
+  /* font-family: "Lexend"; */
   display: flex;
   flex-direction: column;
   margin: 0;
@@ -221,7 +221,7 @@ nav#major li {
   height: 250px;
 }
 
-.home nav ul {
+/* .home nav ul {
   font-size: 2rem;
   background-color: #483d8b;
   margin: 0;
@@ -237,7 +237,7 @@ nav#major li {
 .home nav a {
   text-decoration: none;
   color: whitesmoke;
-}
+} */
 
 .home h1 {
   font-size: 3rem;
@@ -253,7 +253,7 @@ nav#major li {
   -moz-animation: fadeIn ease 10s;
   -o-animation: fadeIn ease 10s;
   -ms-animation: fadeIn ease 10s;
-/* }
+}
 
 @keyframes fadeIn {
   0% {
@@ -298,7 +298,7 @@ nav#major li {
   100% {
     opacity:1;
   }
-} */
+}
 
 .home h2 {
   text-align: center;
@@ -307,11 +307,11 @@ nav#major li {
   font-weight: bold;
 }
 
-.home.image-container {
+/* .home.image-container {
   display: flex;
   justify-content: space-between;
   position: fixed;
-}
+} */
 
 .home.student-image {
   display: flex;
