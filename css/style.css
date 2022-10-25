@@ -1,12 +1,129 @@
-* { 
-  margin:0;
-  padding:0;
+
+.home body {
+  font-family: "Lexend";
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
 }
 
-footer p {
+.home.header-text {
+  background-image: url('../img/suzz.jpg');
+  background-size: cover;
+  height: 400px;
+}
+
+.home nav ul {
+  font-size: 2rem;
+  background-color: #483d8b;
   margin: 0;
-  padding-left: 1rem;
+  display: flex;
+  /* justify-content: space-between; */
+  padding: 0 3rem;
+}
+
+.home nav li {
+  display: inline;
+  padding: 2rem;
+}
+
+.home nav a {
+  text-decoration: none;
+  color: whitesmoke;
+}
+
+.home h1 {
+  font-size: 3rem;
+  font-weight: lighter;
+  margin: 0;
   color: white;
+  text-shadow: 1px 0px whitesmoke;
+  margin-left: 7rem;
+  max-width: 400px;
+  padding-top: 4rem; 
+  animation: fadeIn ease 10s;
+  -webkit-animation: fadeIn ease 10s;
+  -moz-animation: fadeIn ease 10s;
+  -o-animation: fadeIn ease 10s;
+  -ms-animation: fadeIn ease 10s;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity:0;
+  }
+  100% {
+    opacity:1;
+  }
+}
+
+@-moz-keyframes fadeIn {
+  0% {
+    opacity:0;
+  }
+  100% {
+    opacity:1;
+  }
+}
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity:0;
+  }
+  100% {
+    opacity:1;
+  }
+}
+
+@-o-keyframes fadeIn {
+  0% {
+    opacity:0;
+  }
+  100% {
+    opacity:1;
+  }
+}
+
+@-ms-keyframes fadeIn {
+  0% {
+    opacity:0;
+  }
+  100% {
+    opacity:1;
+  }
+}
+
+.home h2 {
+  text-align: center;
+  color: #483d8b;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.home.image-container {
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+}
+
+.home.student-image {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 100%;
+  justify-content: space-between;  
+  align-items: center;
+}
+
+.home.image-container img {
+  max-width: 300px;
+}
+
+.home.image-container p {
+  font-size: larger;
+  font-weight: 700;
+  padding: 0 1.5em;
+  text-align: center;
+  color: #483d8b;
 }
 
 footer {
@@ -18,3 +135,11 @@ footer {
   position: fixed;
   bottom: 0;
 }
+
+footer p {
+  margin: 0;
+  padding-left: 1rem;
+  color: white;
+  font-size: small;
+}
+
