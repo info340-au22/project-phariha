@@ -217,7 +217,7 @@ nav#major li {
 .home.header-text {
   background-image: url('../img/suzz.jpg');
   background-size: cover;
-  height: 400px;
+  height: 250px;
 }
 
 .home nav ul {
@@ -246,7 +246,7 @@ nav#major li {
   text-shadow: 1px 0px whitesmoke;
   margin-left: 7rem;
   max-width: 400px;
-  padding-top: 4rem; 
+  padding-top: 2rem; 
   animation: fadeIn ease 10s;
   -webkit-animation: fadeIn ease 10s;
   -moz-animation: fadeIn ease 10s;
@@ -316,12 +316,13 @@ nav#major li {
   display: flex;
   flex-direction: column;
   flex-basis: 100%;
-  justify-content: space-between;  
+  /* justify-content: space-between;   */
   align-items: center;
 }
 
 .home.image-container img {
   max-width: 300px;
+  max-height: 300px;
 }
 
 .home.image-container p {
@@ -331,6 +332,16 @@ nav#major li {
   text-align: center;
   color: #483d8b;
 }
+
+footer {
+  padding: 0.4em 0.35em 0.2em 0.35em;
+  background-color: #483d8b;
+  text-align: left;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+}
+
 
 
 
