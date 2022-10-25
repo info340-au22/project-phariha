@@ -127,13 +127,12 @@
 }
 
 footer {
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-  background-color: #483d8b;
-  text-align: left;
-  width: 100%;
-  position: fixed;
-  bottom: 0;
+    padding: 0.4em 0.35em 0.2em 0.35em;
+    background-color: #483d8b;
+    text-align: left;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
 }
 
 footer p {
