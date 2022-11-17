@@ -1,0 +1,339 @@
+* {
+    margin: 0;
+    padding: 0;
+  }
+  
+  footer p {
+    margin: 0;
+    padding-left: 1rem;
+    color: white;
+    font-size: small;
+  }
+  
+  footer {
+    padding: 0.4em 0.35em 0.2em 0.35em;
+    background-color: #483d8b;
+    text-align: left;
+    width: 100%;
+    bottom: 0;
+    position:relative;
+  }
+  
+  .uni {
+    text-align: right;
+  }
+  
+  /* -------------------------- Elizabeth's Interactive Page -------------------*/
+  .interact-h1 {
+    margin-top: 1rem;
+    margin-left: 1rem;
+  }
+  
+  div#container {
+    margin-bottom: 7rem;
+    margin-right: 2rem;
+  }
+  
+  
+  .interact-h2 {
+    margin-top: 2rem;
+    margin-left: 2rem;
+  }
+  
+  nav {
+    background-color: #483d8b;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding-bottom: 1rem;
+    padding-top: 1rem;
+  }
+  
+  nav a:link {
+    text-decoration: none;
+    font-size: medium;
+  }
+  
+  nav a {
+    color: white;
+  }
+  
+  nav a:link:hover {
+    color: white;
+    border-bottom: solid;
+    border-bottom-color: #f0f0f0;
+    border-bottom-width: 0.1rem;
+  }
+  
+  nav li {
+    display: inline;
+    margin: 0 1rem;
+  
+  }
+  
+  .interact-list-cs {
+    margin-left: 4rem;
+    margin-top: 1rem;
+  
+  }
+  
+  .interact-list-cs p {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  
+  }
+  
+  .interact-list-cs li {
+    margin-top: 0.5rem;
+    
+  }
+  
+  .sub-li {
+    margin-left: 2rem;
+  }
+  
+  .bold {
+    font-weight: bold;
+  }
+  
+  .category {
+    font-weight: bold;
+  }
+  
+  @media (min-width: 992px) {
+    .interact-h1 {
+        margin-left: 10rem;
+    }
+    .interact-h2 {
+        margin-left: 13rem;
+    }
+    .interact-list-cs {
+        margin-left: 15rem;
+    }
+    .sub-li {
+        margin-left: 1rem;
+    }
+  }
+  
+  
+  /* ------------------------------- MALENA: POST PAGE---------------------------------- */
+  /* navagation bar */
+  
+  
+  #post .fa.fa-bars {
+    color: white;
+    font-size: 1.5rem;
+  }
+  
+  #post h1 {
+    font-size: 2rem;
+  }
+  
+  #post h2 {
+    font-size: 1.5rem;
+  }
+  
+  #post button {
+    background-color: #483d8b;
+    color: white;
+  }
+  
+  #post .post-date {
+    font-size: 1rem;
+  }
+  
+  #post .card-title {
+    background-color: lavender;
+  }
+  
+  #post .fa.fa-filter {
+    float: right;
+    color: #483d8b;
+    font-size: 1.5rem;
+  }
+  
+  /* Priya Major Page */
+  
+  header.major-page {
+    background-color: #483d8b;
+    font-size: 32px;
+    color: white;
+    text-align: center;
+  }
+  
+  
+  .input-group {
+    margin: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  nav#major {
+    color: white;
+    background-color: #483d8b;
+    padding: 0.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid rgb(255, 255, 255);
+  }
+  
+  nav#major ul {
+    padding: 0;
+    margin: 0;
+  }
+  
+  nav#major a {
+    text-decoration: none;
+    color: white;
+  }
+  
+  nav#major li {
+    display: inline;
+    margin: 0 1rem;
+  }
+  
+  #info a, #eng a {
+    color: #483d8b;
+  }
+  
+  #info {
+    flex: 50%;
+  }
+  
+  #eng {
+    flex: 50%;
+  }
+  
+  
+  /* -------------------------- GABRIELLA'S HOME PAGE -------------------*/
+  
+  .home body {
+    /* font-family: "Lexend"; */
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .home.header-text {
+    background-image: url('../img/suzz.jpg');
+    background-size: cover;
+    height: 250px;
+  }
+  
+  /* .home nav ul {
+    font-size: 2rem;
+    background-color: #483d8b;
+    margin: 0;
+    display: flex;
+    padding: 0 3rem;
+  }
+  
+  .home nav li {
+    display: inline;
+    padding: 2rem;
+  }
+  
+  .home nav a {
+    text-decoration: none;
+    color: whitesmoke;
+  } */
+  
+  .home h1 {
+    font-size: 3rem;
+    font-weight: lighter;
+    margin: 0;
+    color: white;
+    text-shadow: 1px 0px whitesmoke;
+    margin-left: 7rem;
+    max-width: 400px;
+    padding-top: 2rem; 
+    animation: fadeIn ease 10s;
+    -webkit-animation: fadeIn ease 10s;
+    -moz-animation: fadeIn ease 10s;
+    -o-animation: fadeIn ease 10s;
+    -ms-animation: fadeIn ease 10s;
+  }
+  
+  @keyframes fadeIn {
+    0% {
+      opacity:0;
+    }
+    100% {
+      opacity:1;
+    }
+  }
+  
+  @-moz-keyframes fadeIn {
+    0% {
+      opacity:0;
+    }
+    100% {
+      opacity:1;
+    }
+  }
+  
+  @-webkit-keyframes fadeIn {
+    0% {
+      opacity:0;
+    }
+    100% {
+      opacity:1;
+    }
+  }
+  
+  @-o-keyframes fadeIn {
+    0% {
+      opacity:0;
+    }
+    100% {
+      opacity:1;
+    }
+  }
+  
+  @-ms-keyframes fadeIn {
+    0% {
+      opacity:0;
+    }
+    100% {
+      opacity:1;
+    }
+  }
+  
+  .home h2 {
+    text-align: center;
+    color: #483d8b;
+    font-size: 2rem;
+    font-weight: bold;
+  }
+  
+  /* .home.image-container {
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+  } */
+  
+  .home.student-image {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 100%;
+    /* justify-content: space-between;   */
+    align-items: center;
+  }
+  
+  .home.image-container img {
+    max-width: 300px;
+    max-height: 300px;
+  }
+  
+  .home.image-container p {
+    font-size: larger;
+    font-weight: 700;
+    padding: 0 1.5em;
+    text-align: center;
+    color: #483d8b;
+  }
+  
+  
+  
+  
