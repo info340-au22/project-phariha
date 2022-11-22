@@ -212,3 +212,97 @@ nav {
     text-align: center;
     color: #483d8b;
   }
+
+  
+/* -------------------------- CS Major Page -------------------*/
+.interact-h1 {
+  margin-top: 1rem;
+  margin-left: 1rem;
+}
+
+div#container {
+  margin-bottom: 7rem;
+  margin-right: 2rem;
+}
+
+
+.interact-h2 {
+  margin-top: 2rem;
+  margin-left: 2rem;
+}
+
+nav {
+  background-color: #483d8b;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding-bottom: 1rem;
+  padding-top: 1rem;
+}
+
+nav a:link {
+  text-decoration: none;
+  font-size: medium;
+}
+
+nav a {
+  color: white;
+}
+
+nav a:link:hover {
+  color: white;
+  border-bottom: solid;
+  border-bottom-color: #f0f0f0;
+  border-bottom-width: 0.1rem;
+}
+
+nav li {
+  display: inline;
+  margin: 0 1rem;
+
+}
+
+.interact-list-cs {
+  margin-left: 4rem;
+  margin-top: 1rem;
+
+}
+
+.interact-list-cs p {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+
+}
+
+.interact-list-cs li {
+  margin-top: 0.5rem;
+  
+}
+
+.sub-li {
+  margin-left: 2rem;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.category {
+  font-weight: bold;
+}
+
+@media (min-width: 992px) {
+  .interact-h1 {
+      margin-left: 10rem;
+  }
+  .interact-h2 {
+      margin-left: 13rem;
+  }
+  .interact-list-cs {
+      margin-left: 15rem;
+  }
+  .sub-li {
+      margin-left: 1rem;
+  }
+}
+

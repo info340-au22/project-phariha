@@ -1,9 +1,8 @@
 import React from 'react';
-import { NavBar } from './NavBar';
 import { Post } from './Post';
 import { CreatePost } from './CreatePost';
 import { FilterButton, FilterPost } from './FilterPost';
-import { Footer } from './Footer';
+import { CSMajor } from './CSMajor';
 
 export default function App(props) {
 
@@ -11,16 +10,21 @@ export default function App(props) {
 
     //what content should my App look like?
     return (
-        
-        <div className='post-page'>
-            <NavBar />
-            <div className="container-fluid d-flex flex-column">
-                <CreatePost />
-                <FilterPost />
-                <Post />
-                <Post />
-            </div>
-            <Footer />
-        </div>
+        // <div className = 'website'>
+        //     <div className='post-page'>
+        //         <NavBar />
+        //         <div className="container-fluid d-flex flex-column">
+        //             <CreatePost />
+        //             <FilterPost />
+        //             <Post />
+        //             <Post />
+        //         </div>
+        //         <Footer />
+        //     </div>
+
+            
+        // </div>,
+            <CSMajor />
+
     );
 }
