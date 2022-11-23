@@ -127,7 +127,7 @@ const fundamentalsArray = FUNDAMENTAL_CLASSES_INPUT.map((className, index) => {
 
 export function InfoMajor(props) {
     return (
-        <div className='test'>
+        <div>
             <NavBar />
             <div>
                 <header className="major-page">
