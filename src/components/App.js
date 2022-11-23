@@ -4,9 +4,12 @@ import { CreatePost } from './CreatePost';
 import { FilterButton, FilterPost } from './FilterPost';
 import { CSMajor } from './CSMajor';
 import { InfoMajor } from './InfoMajor';
+import { Major } from './Major';
+import { useState } from 'react';
 
 export default function App(props) {
-
+    const [currData, setCurrData] = useState([])
+    const [storedData, setStoredData] = useState([])
     const navList = ['homepage', 'major', 'post'];
 
     //what content should my App look like?
@@ -24,8 +27,11 @@ export default function App(props) {
         //     </div>
 
             
-        // </div>,
-            <InfoMajor />
+        // </div>
+            // <InfoMajor />
+            <div className='major-page'>
+                <Major currData={currData} setStoredData={setStoredData} storedData={storedData}/>
+            </div>
 
     );
 }
