@@ -4,26 +4,29 @@ import { Footer } from './Footer';
 import '../index.css';
 
 const pageName = "A Guide To the University of Washington's Major System";
-const majorName = "Computer Science";
+const majorName = "Informatics";
 const prereqClasses = "Prerequisite Classes";
+const warning = "*Applicants are allowed to apply to the Informatics major a maximum of two times.";
 
 const PREREQ_INPUT = [
-    <div><a href="http://www.washington.edu/students/crscat/math.html#math124">MATH 124, 125 & 126</a>, (or Honors <a href="http://www.washington.edu/students/crscat/math.html#math134">MATH 134, 135 & 136</a>)</div>,
+    <div><a href="http://www.washington.edu/students/crscat/info.html#info200">INFO 200</a></div>,
     <div><a href="https://www.washington.edu/students/crscat/cse.html#cse121">CSE 121, 122 & 123</a> or <a href="http://www.washington.edu/students/crscat/cse.html#cse142">CSE 142 & 143</a></div>,
     <div>Five credits from the list of approved natural science courses for Computer Science on the <a href="https://www.cs.washington.edu/academics/ugrad/current-students/degree/courses/cs-natural-science">Allen School website</a></div>,
-    <div>Five credits of <a href="https://www.washington.edu/uaa/advising/degree-overview/general-education/english-composition/">English Composition</a></div>
+    <div>Any <a href="https://www.washington.edu/uaa/advising/degree-overview/general-education/">I&S course</a> (Individuals and Societies) other than INFO 200</div>,
+    <div>More informaion about the major's prerequsite classes can be found <a href="https://ischool.uw.edu/programs/informatics/admissions/current-students/prerequisites">here</a></div>
 ];
 
 const howToApply = "How to Apply";
 
 const APP_DEADLINE_INPUT = [{
-    quarter: "autumn",
-    date: "July 1st"
+    quarter: "winter",
+    date: "September 30th"
 },
 {
-    quarter: "spring",
-    date: "January 15th"
+    quarter: "autumn",
+    date: "early April"
 }];
+
 const deadlineArray = APP_DEADLINE_INPUT.map((deadline) => {
     const listType = "sub-li";
     const element = <li className={listType}>To enter the program in the {deadline.quarter} quarter: {deadline.date}</li>;
@@ -31,7 +34,8 @@ const deadlineArray = APP_DEADLINE_INPUT.map((deadline) => {
 });
 
 const HOW_TO_APPLY_INPUT = [
-    <div>Application Deadlines:<ul>{deadlineArray}</ul></div>, <div>3 required and 1 optional <a href="https://www.engr.washington.edu/uapp/essay_questions.phtml#dept_essay">essay questions</a></div>,
+    <div>Application Deadlines:<ul>{deadlineArray}</ul></div>, 
+    <div>1 required <a href="https://ischool.uw.edu/programs/informatics/admissions/apply">application essay</a></div>,
     "Complete all prerequisites before applying",
     <div>More information about applying to the Computer Science major can be found <a href="https://www.cs.washington.edu/academics/ugrad/admissions/currentuw">here</a></div>,
     <div>Related majors can be found <a href="https://www.cs.washington.edu/academics/ugrad/nonmajor-options/related-majors">here</a></div>
@@ -56,11 +60,11 @@ const coreElectArray = CORE_ELECT_INPUT.map((classes) => {
 })
 
 const FUNDAMENTAL_CLASSES_INPUT = [
-    "123 Intro to Computer Programming III OR (5 credits) CSE 143 Computer Programming II", 
-    "311 Foundations of Computing I", 
-    "312 Foundations of Computing II", 
-    "331 Software Design and Implementation", 
-    "332 Data Structures and Parallelism", 
+    "123 Intro to Computer Programming III OR (5 credits) CSE 143 Computer Programming II",
+    "311 Foundations of Computing I",
+    "312 Foundations of Computing II",
+    "331 Software Design and Implementation",
+    "332 Data Structures and Parallelism",
     "351 The Hardware/Software Interface"
 ];
 
@@ -79,12 +83,13 @@ const fundamentalsArray = FUNDAMENTAL_CLASSES_INPUT.map((className) => {
     return element;
 })
 
-export function CSMajor(props) {
+export function InfoMajor(props) {
     return (
         <div className='test'>
             <NavBar />
             <div>
                 <h1 className="interact-h1">{majorName}</h1>
+                <p className="interact-h2">{warning}</p>
                 <div id="container">
                     <h2 className="interact-h2">{prereqClasses}</h2>
                     <ul className="interact-list-cs">{prereqClassArray}</ul>

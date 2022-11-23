@@ -3,6 +3,7 @@ import { Post } from './Post';
 import { CreatePost } from './CreatePost';
 import { FilterButton, FilterPost } from './FilterPost';
 import { CSMajor } from './CSMajor';
+import { InfoMajor } from './InfoMajor';
 
 export default function App(props) {
 
@@ -24,7 +25,7 @@ export default function App(props) {
 
             
         // </div>,
-            <CSMajor />
+            <InfoMajor />
 
     );
 }
