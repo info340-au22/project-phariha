@@ -7,9 +7,9 @@ export function HomePage(props) {
 
     const myStyle = {
         backgroundImage: "url('img/suzz.jpg')",
-        height: '40vh',
-        backgroundSize: 'cover',
-        backgroundRepeat: 'no-repeat',
+        // height: '40vh',
+        // backgroundSize: 'cover',
+        // backgroundRepeat: 'no-repeat',
     }
 
     const WIT_cards = [
@@ -21,7 +21,7 @@ export function HomePage(props) {
     
     const imageCards = WIT_cards.map((wImageCard) => {
         return <div className='home card'> 
-                   <img className="card-img-top" src= {wImageCard.pic} alt={wImageCard.title} />
+                   <img className="card-img-top" key={wImageCard.pic} src={wImageCard.pic} alt={wImageCard.title} />
                    <div className="card-body">
                         <h3 className="card-title">{wImageCard.title}</h3>
                         <p className="card-text">{wImageCard.text}</p>
@@ -30,25 +30,25 @@ export function HomePage(props) {
     })
 
     return (
-        <div className='test'>
+        <div>
             <NavBar/>
-            <main>
+            {/* <main> */}
                 <div style={myStyle} className='home'>
                     <h1>Confused About Major Prerequisites?</h1>
                 </div>
-
-                <div id='image-container' className='home col-12'> 
-                    <h2>We're Here to Help</h2>
+                <div className='home-description col-12'> 
+                    {/* <h2>We're Here to Help</h2> */}
                     <div className='about-section'> 
+                        <h2>We're Here to Help</h2>
                         <p className='about'>Our website assists undeclared students in determining the necessary steps to apply to a major. Using current information from department websites, our site allows users to navigate prerequisite and application requirements by filtering by major, minor, or class. Students may also read peer reviews of courses, and review courses themselves.
                         </p>
                     </div>
-                    <div className='card-deck col-12'>
+                    <div className='d-flex'>
                         {imageCards}
                     </div>
                        
                 </div>
-            </main>
+            {/* </main> */}
             <Footer/>
         </div>     
     )        

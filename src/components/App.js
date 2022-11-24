@@ -30,9 +30,13 @@ export default function App(props) {
             
         // </div>
             // <InfoMajor />
-            <div className='major-page'>
-                <Major currData={currData} setStoredData={setStoredData} storedData={storedData}/>
+            // <div className='major-page'>
+            //     <Major currData={currData} setStoredData={setStoredData} storedData={storedData}/>
+            // </div>
+            <div>
+                <HomePage/>
             </div>
+            
 
     );
 }

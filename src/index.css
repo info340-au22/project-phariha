@@ -90,11 +90,13 @@ footer p {
     -ms-animation: fadeIn ease 10s;
   }
 
-  
-  .home h2 {
+  .home-description h2 {
     text-align: center;
+    /* color: white; */
     color: #483d8b;
-    font-size: 3rem;
+    /* background-color: #483d8b; */
+    font-size: 2em;
+    padding: 1em;
     /* font-weight: bold; */
   }
   
@@ -102,8 +104,9 @@ footer p {
     color:#483d8b;
   }
 
-  .home .about {
-    font-size: 1.5rem;
+  .about {
+    font-size: 20px;
+    /* font-size: 1.5rem; */
     color: #483d8b;
     margin: 0 2em 1em 2em;
   }
