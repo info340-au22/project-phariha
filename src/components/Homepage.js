@@ -42,7 +42,7 @@ export function HomePage(props) {
                         <p className='about'>Our website assists undeclared students in determining the necessary steps to apply to a major. Using current information from department websites, our site allows users to navigate prerequisite and application requirements by filtering by major, minor, or class. Students may also read peer reviews of courses, and review courses themselves.
                         </p>
                     </div>
-                    <div className='d-flex'>
+                    <div className='card-deck' >
                         {imageCards}
                     </div>
                        
