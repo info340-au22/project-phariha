@@ -1,7 +1,6 @@
 import React from 'react';
 import '../index.css';
 
-
 export function CreatePost(props) {
 
     const handleClick = (event) => {
@@ -9,10 +8,8 @@ export function CreatePost(props) {
     }
 
     return (
-        <div id="post" className="button mb-2 mt-2">
-            <button className="create-post" type="button" onClick={handleClick}>
-                Create New Post
-            </button>
-        </div>
+        <button className="create-post mx-2 mt-3" type="button" onClick={handleClick}>
+            Create New Post
+        </button>
     )
 }
