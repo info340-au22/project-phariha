@@ -5,6 +5,7 @@ import { SortPost } from './SortPost';
 import { Footer } from './Footer';
 import { FilterList } from './FilterList';
 import { PostCard } from './PostCard';
+import { FilterButton } from './FilterButton';
 import '../index.css';
 
 
@@ -17,8 +18,13 @@ export function PostPage(props) {
     return (
         <div className='post-page'>
             <NavBar page={displayPages} currentPage={currentPage} />
-            <CreatePost />
-            <SortPost />
+            <div className='d-flex d-inline sort-filter d-none d-sm-none d-md-block'>
+                <CreatePost />
+                <SortPost />
+            </div>
+            <div className='sort-filter-modal d-block d-md-none d-lg-none'>
+                    <FilterButton />
+                </div>
             <div className='d-flex'>
                 <FilterList />
                 <PostCard />
