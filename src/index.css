@@ -92,11 +92,10 @@ footer p {
 
   .home-description h2 {
     text-align: center;
-    /* color: white; */
     color: #483d8b;
     /* background-color: #483d8b; */
-    font-size: 2em;
-    padding: 1em;
+    font-size: 2.5em;
+    padding: 1em 0 .5;
     /* font-weight: bold; */
   }
   

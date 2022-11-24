@@ -7,9 +7,9 @@ export function HomePage(props) {
 
     const myStyle = {
         backgroundImage: "url('img/suzz.jpg')",
-        // height: '40vh',
-        // backgroundSize: 'cover',
-        // backgroundRepeat: 'no-repeat',
+        height: '40vh',
+        backgroundSize: 'cover',
+        backgroundRepeat: 'no-repeat',
     }
 
     const WIT_cards = [
@@ -32,12 +32,11 @@ export function HomePage(props) {
     return (
         <div>
             <NavBar/>
-            {/* <main> */}
+            
                 <div style={myStyle} className='home'>
                     <h1>Confused About Major Prerequisites?</h1>
                 </div>
                 <div className='home-description col-12'> 
-                    {/* <h2>We're Here to Help</h2> */}
                     <div className='about-section'> 
                         <h2>We're Here to Help</h2>
                         <p className='about'>Our website assists undeclared students in determining the necessary steps to apply to a major. Using current information from department websites, our site allows users to navigate prerequisite and application requirements by filtering by major, minor, or class. Students may also read peer reviews of courses, and review courses themselves.
@@ -48,7 +47,7 @@ export function HomePage(props) {
                     </div>
                        
                 </div>
-            {/* </main> */}
+            
             <Footer/>
         </div>     
     )        
