@@ -3,11 +3,11 @@ import data from '../data/data.json'
 
 
 export function List(props) {
-    const filteredData = data.filter((el) => {
+    const filteredData = data.filter((dataObj) => {
         if (props.input === '') {
-            return el;
+            return dataObj;
         } else {
-            return el.major.toLowerCase().includes(props.input)
+            return dataObj.major.toLowerCase().includes(props.input)
         }
     })
     return (
