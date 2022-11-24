@@ -247,6 +247,91 @@ header.major-page {
   text-align: center;
 }
 
+/* --------------- Post Page -------------- */
+
+button.create-post {
+  background-color: #483d8b;
+  color: white;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.25rem;
+
+}
+
+#post h1 {
+  font-size: 2rem;
+}
+
+#post h2 {
+  font-size: 1.5rem;
+}
+
+#post .post-date {
+  font-size: 1rem;
+}
+
+#post .card-title {
+  background-color: lavender;
+}
+
+#post.sort-post {
+  float: right;
+  margin-right: 1rem;
+}
+
+#post.filter-options-title {
+  font-size: 2rem;
+}
+
+#post.user-name {
+  font-weight: bold;
+  font-size: 2rem;
+  display: inline;
+}
+
+div.col-2 {
+  overflow: hidden;
+}
+
+#post.date {
+  float: right;
+  font-size: 2rem;
+  color: grey;
+}
+
+ul.filter-option {
+  padding: 0;
+  background-color: lavender;
+}
+
+a#post {
+  font-weight: bold;
+}
+
+ul#post.filter-id {
+  padding: 0;
+  margin-bottom: 1.5rem;
+}
+
+ul#post.sort-modal {
+  padding: 0;
+  background-color: lavender;
+}
+
+
+#post button.dropdown-toggle {
+  float: right;
+  background-color: #483d8b;
+  font-size: rem;
+}
+
+button#post.sort-filter {
+  background-color: #483d8b;
+}
+
+#post .fa.fa-filter {
+  color: white;
+}
+
 @media (min-width: 992px) {
   .interact-h1 {
     margin-left: 10rem;
@@ -265,3 +350,16 @@ header.major-page {
     margin-left: 1rem;
   }
 }
+
+@media (max-width: 640px) {
+
+  #post.date {
+    font-size: 5vw;
+  }
+  #post.user-name {
+    font-size: 5vw;
+  }
+
+  #post .card-contents {
+    font-size: 3vw;
+  }
