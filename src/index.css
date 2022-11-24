@@ -349,7 +349,6 @@ button#post.sort-filter {
   .sub-li {
     margin-left: 1rem;
   }
-}
 
 @media (max-width: 640px) {
 
@@ -363,3 +362,4 @@ button#post.sort-filter {
   #post .card-contents {
     font-size: 3vw;
   }
+}
