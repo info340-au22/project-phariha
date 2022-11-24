@@ -15,7 +15,8 @@ export function Major(props) {
     const majorArray = data.map((listPoint) => {
         const dataPoints = <li key={listPoint.major}>{listPoint.major}</li>;
         return dataPoints;
-    })
+    });
+
     return (
         <div>
             <NavBar/>
@@ -47,4 +48,4 @@ export function Major(props) {
             <Footer/>
         </div>
     )
-}
+};

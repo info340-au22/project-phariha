@@ -1,7 +1,5 @@
 import React from 'react';
-import { Post } from './Post';
-import { CreatePost } from './CreatePost';
-import { FilterButton, FilterPost } from './FilterPost';
+import { PostPage } from './PostPage'
 import { CSMajor } from './CSMajor';
 import { InfoMajor } from './InfoMajor';
 import { Major } from './Major';
@@ -16,7 +14,7 @@ export default function App(props) {
     //what content should my App look like?
     return (
         <div>
-            {/* <HomePage /> */}
+            <HomePage />
             {/* <InfoMajor /> */}
             {/* <CSMajor /> */}
             {/* <PostPage /> */}

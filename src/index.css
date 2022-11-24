@@ -75,50 +75,52 @@ footer p {
 }
 
 /*-------------------------HOME PAGE-------------------------*/
-  .home h1 {
-    font-size: 5rem;
-    font-weight: lighter;
-    margin: 0;
-    color: white;
-    /* text-shadow: 1px 0px whitesmoke; */
-    margin-left: 7rem;
-    max-width: 1500px;
-    padding-top: 5rem; 
-    animation: fadeIn ease 10s;
-    -webkit-animation: fadeIn ease 10s;
-    -moz-animation: fadeIn ease 10s;
-    -o-animation: fadeIn ease 10s;
-    -ms-animation: fadeIn ease 10s;
+.home h1 {
+  font-size: 5rem;
+  font-weight: lighter;
+  margin: 0;
+  color: white;
+  /* text-shadow: 1px 0px whitesmoke; */
+  margin-left: 7rem;
+  max-width: 1500px;
+  padding-top: 5rem;
+  animation: fadeIn ease 10s;
+  -webkit-animation: fadeIn ease 10s;
+  -moz-animation: fadeIn ease 10s;
+  -o-animation: fadeIn ease 10s;
+  -ms-animation: fadeIn ease 10s;
+}
+
+.home-description h2 {
+  text-align: center;
+  color: #483d8b;
+  /* background-color: #483d8b; */
+  font-size: 2.5em;
+  padding: 1em 0 .5;
+  /* font-weight: bold; */
+}
+
+.home .card-title,
+.card-text {
+  color: #483d8b;
+}
+
+.about {
+  font-size: 20px;
+  /* font-size: 1.5rem; */
+  color: #483d8b;
+  margin: 0 2em 1em 2em;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
   }
 
-  .home-description h2 {
-    text-align: center;
-    color: #483d8b;
-    /* background-color: #483d8b; */
-    font-size: 2.5em;
-    padding: 1em 0 .5;
-    /* font-weight: bold; */
+  100% {
+    opacity: 1;
   }
-  
-  .home .card-title, .card-text  {
-    color:#483d8b;
-  }
-
-  .about {
-    font-size: 20px;
-    /* font-size: 1.5rem; */
-    color: #483d8b;
-    margin: 0 2em 1em 2em;
-  }
-
-  @keyframes fadeIn {
-    0% {
-      opacity:0;
-    }
-    100% {
-      opacity:1;
-    }
-  }
+}
 
 @-moz-keyframes fadeIn {
   0% {
@@ -136,12 +138,6 @@ footer p {
   }
 
 }
-
-  @media (min-width: 992px) {
-    .card-deck {
-      display: flex;
-    } 
-  }
 
 /* -------------------------- CS Major Page -------------------*/
 .interact-h1 {
@@ -181,12 +177,12 @@ footer p {
   margin-left: 2rem;
 }
 
-.home.image-container img {
+main .home.image-container img {
   max-width: 300px;
   max-height: 300px;
 }
 
-.home.image-container p {
+main .home.image-container p {
   font-size: larger;
   font-weight: 700;
   padding: 0 1.5em;
@@ -338,6 +334,10 @@ button#post.sort-filter {
     margin-left: 10rem;
   }
 
+  .card-deck {
+    display: flex;
+  } 
+
   .interact-h2 {
     margin-left: 13rem;
   }
@@ -351,17 +351,18 @@ button#post.sort-filter {
     margin-left: 1rem;
   }
 
-@media (max-width: 640px) {
+  @media (max-width: 640px) {
 
-  #post.date {
-    font-size: 5vw;
-  }
-  #post.user-name {
-    font-size: 5vw;
-  }
+    #post.date {
+      font-size: 5vw;
+    }
 
-  #post .card-contents {
-    font-size: 3vw;
+    #post.user-name {
+      font-size: 5vw;
+    }
+
+    #post .card-contents {
+      font-size: 3vw;
+    }
   }
-}
 }
