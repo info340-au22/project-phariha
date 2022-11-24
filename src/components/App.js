@@ -15,28 +15,14 @@ export default function App(props) {
 
     //what content should my App look like?
     return (
-        // <div className = 'website'>
-        //     <div className='post-page'>
-        //         <NavBar />
-        //         <div className="container-fluid d-flex flex-column">
-        //             <CreatePost />
-        //             <FilterPost />
-        //             <Post />
-        //             <Post />
-        //         </div>
-        //         <Footer />
-        //     </div>
-
-            
-        // </div>
-            // <InfoMajor />
-            // <div className='major-page'>
-            //     <Major currData={currData} setStoredData={setStoredData} storedData={storedData}/>
-            // </div>
-            <div>
-                <HomePage/>
-            </div>
-            
-
+        <div>
+            {/* <HomePage /> */}
+            {/* <InfoMajor /> */}
+            {/* <CSMajor /> */}
+            {/* <PostPage /> */}
+            {/* <div className='major-page'>
+                <Major currData={currData} setStoredData={setStoredData} storedData={storedData} />
+            </div> */}
+        </div>
     );
 }
