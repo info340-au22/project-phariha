@@ -48,4 +48,3 @@ export function Major(props) {
         </div>
     )
 }
-}
