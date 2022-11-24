@@ -112,33 +112,39 @@ nav {
   color: white;
   } 
 
-  .home body {
-    display: flex;
-    flex-direction: column;
-    margin: 0;
-    padding: 0;
-  }
-  
-  /* .home.header-text {
-    background-image: url('../img/suzz.jpg');
-    background-size: cover;
-    height: 250px;
-  } */
-
+/*-------------------------HOME PAGE-------------------------*/
   .home h1 {
-    font-size: 3rem;
+    font-size: 5rem;
     font-weight: lighter;
     margin: 0;
     color: white;
-    text-shadow: 1px 0px whitesmoke;
+    /* text-shadow: 1px 0px whitesmoke; */
     margin-left: 7rem;
-    max-width: 400px;
-    padding-top: 2rem; 
+    max-width: 1500px;
+    padding-top: 5rem; 
     animation: fadeIn ease 10s;
     -webkit-animation: fadeIn ease 10s;
     -moz-animation: fadeIn ease 10s;
     -o-animation: fadeIn ease 10s;
     -ms-animation: fadeIn ease 10s;
+  }
+
+  
+  .home h2 {
+    text-align: center;
+    color: #483d8b;
+    font-size: 3rem;
+    /* font-weight: bold; */
+  }
+  
+  .home .card-title, .card-text  {
+    color:#483d8b;
+  }
+
+  .home .about {
+    font-size: 1.5rem;
+    color: #483d8b;
+    margin: 0 2em 1em 2em;
   }
 
   @keyframes fadeIn {
@@ -185,35 +191,13 @@ nav {
       opacity:1;
     }
   }
-  
-  .home h2 {
-    text-align: center;
-    color: #483d8b;
-    font-size: 2rem;
-    font-weight: bold;
-  }
-  
-  .home.student-image {
-    display: flex;
-    flex-direction: column;
-    flex-basis: 100%;
-    align-items: center;
-  }
-  
-  .home.image-container img {
-    max-width: 300px;
-    max-height: 300px;
-  }
-  
-  .home.image-container p {
-    font-size: larger;
-    font-weight: 700;
-    padding: 0 1.5em;
-    text-align: center;
-    color: #483d8b;
+
+  @media (min-width: 992px) {
+    .card-deck {
+      display: flex;
+    } 
   }
 
-  
 /* -------------------------- CS Major Page -------------------*/
 .interact-h1 {
   margin-top: 1rem;
@@ -224,7 +208,6 @@ div#container {
   margin-bottom: 7rem;
   margin-right: 2rem;
 }
-
 
 .interact-h2 {
   margin-top: 2rem;

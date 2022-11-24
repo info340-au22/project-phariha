@@ -39,7 +39,7 @@ const prereqClassArray = PREREQ_INPUT.map((prereq) => {
     return element;
 })
 
-const howToApplyArray = HOW_TO_APPLY_INPUT.mao((step) => {
+const howToApplyArray = HOW_TO_APPLY_INPUT.map((step) => {
     const element = <li>{step}</li>
 })
 const fundamentalsArray = FUNDAMENTAL_CLASSES_INPUT.map((className) => {
@@ -67,7 +67,7 @@ export function CSMajor(props) {
                         <ul>{fundamentalsArray}</ul>
                         <li className="category">{coreAndElectives}</li>
                         <p>{coreAndElectivesText}</p>
-                        <ul>6
+                        <ul>
                             <li className="sub-li">(12-16 credits) Four, 400-level courses from the <a
                                 href="https://www.cs.washington.edu/academics/ugrad/current-students/degree/courses">CSE
                                 Core Courses</a></li>
