@@ -1,0 +1,25 @@
+[ 
+    {"major": "Informatics"},
+    {"major": "Biomedical and Health Informatics"},
+    {"major": "Data Science"},
+    {"major": "Human-Computer Interaction"},
+    {"major": "Information Architecture"},
+    {"major": "Information Assurance and Cybersecurity"},
+    {"major": "Student-Designed Concentration"},
+
+    {"major": "College of Engineering"},
+    {"major": "Aeronautics and Astronautics"},
+    {"major": "Bioengineering"},
+    {"major": "Chemical Engineering"},
+    {"major": "Civil Engineering"},
+    {"major": "Computer Science and Engineering"},
+    {"major": "Electrical Engineering"},
+    {"major": "Environmental Engineering"},
+    {"major": "Human Centered Design Engineering"},
+    {"major": "Industrial Engineering"},
+    {"major": "Materials Science and Engineering"},
+    {"major": "Mechanical Engineering"},
+    {"major": "Biomechanics"},
+    {"major": "Mechatronics"},
+    {"major": "Nanoscience and Molecular Engineering"}
+]
