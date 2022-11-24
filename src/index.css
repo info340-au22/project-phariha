@@ -73,85 +73,49 @@ footer p {
   font-size: small;
 }
 
-footer {
-  padding: 0.4em 0.35em 0.2em 0.35em;
-  background-color: #483d8b;
-  text-align: left;
-  width: 100%;
-  bottom: 0;
-  /* position:fixed; */
-}
-
-button.create-post {
-  background-color: #483d8b;
-  color: white;
-
-}
-
-#post h1 {
-  font-size: 2rem;
-}
-
-#post h2 {
-  font-size: 1.5rem;
-}
-
-#post .post-date {
-  font-size: 1rem;
-}
-
-#post .card-title {
-  background-color: lavender;
-}
-
-#post button.dropdown-toggle {
-  float: right;
-  background-color: #483d8b;
-  font-size: rem;
-}
-
-#post .fa.fa-filter {
-  color: white;
-}
-
-.home body {
-  display: flex;
-  flex-direction: column;
-  margin: 0;
-  padding: 0;
-}
-
-/* .home.header-text {
-    background-image: url('../img/suzz.jpg');
-    background-size: cover;
-    height: 250px;
-  } */
-
-.home h1 {
-  font-size: 3rem;
-  font-weight: lighter;
-  margin: 0;
-  color: white;
-  text-shadow: 1px 0px whitesmoke;
-  margin-left: 7rem;
-  max-width: 400px;
-  padding-top: 2rem;
-  animation: fadeIn ease 10s;
-  -webkit-animation: fadeIn ease 10s;
-  -moz-animation: fadeIn ease 10s;
-  -o-animation: fadeIn ease 10s;
-  -ms-animation: fadeIn ease 10s;
-}
-
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
+/*-------------------------HOME PAGE-------------------------*/
+  .home h1 {
+    font-size: 5rem;
+    font-weight: lighter;
+    margin: 0;
+    color: white;
+    /* text-shadow: 1px 0px whitesmoke; */
+    margin-left: 7rem;
+    max-width: 1500px;
+    padding-top: 5rem; 
+    animation: fadeIn ease 10s;
+    -webkit-animation: fadeIn ease 10s;
+    -moz-animation: fadeIn ease 10s;
+    -o-animation: fadeIn ease 10s;
+    -ms-animation: fadeIn ease 10s;
   }
 
-  100% {
-    opacity: 1;
+  
+  .home h2 {
+    text-align: center;
+    color: #483d8b;
+    font-size: 3rem;
+    /* font-weight: bold; */
   }
-}
+  
+  .home .card-title, .card-text  {
+    color:#483d8b;
+  }
+
+  .home .about {
+    font-size: 1.5rem;
+    color: #483d8b;
+    margin: 0 2em 1em 2em;
+  }
+
+  @keyframes fadeIn {
+    0% {
+      opacity:0;
+    }
+    100% {
+      opacity:1;
+    }
+  }
 
 @-moz-keyframes fadeIn {
   0% {
@@ -168,9 +132,18 @@ button.create-post {
     opacity: 0;
   }
 
-  100% {
-    opacity: 1;
+}
+
+  @media (min-width: 992px) {
+    .card-deck {
+      display: flex;
+    } 
   }
+
+/* -------------------------- CS Major Page -------------------*/
+.interact-h1 {
+  margin-top: 1rem;
+  margin-left: 1rem;
 }
 
 @-o-keyframes fadeIn {
@@ -200,11 +173,9 @@ button.create-post {
   font-weight: bold;
 }
 
-.home.student-image {
-  display: flex;
-  flex-direction: column;
-  flex-basis: 100%;
-  align-items: center;
+.interact-h2 {
+  margin-top: 2rem;
+  margin-left: 2rem;
 }
 
 .home.image-container img {

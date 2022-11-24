@@ -6,6 +6,7 @@ import { CSMajor } from './CSMajor';
 import { InfoMajor } from './InfoMajor';
 import { Major } from './Major';
 import { useState } from 'react';
+import { HomePage } from './Homepage';
 
 export default function App(props) {
     const [currData, setCurrData] = useState([])
