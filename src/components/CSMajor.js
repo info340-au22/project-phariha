@@ -82,7 +82,7 @@ const fundamentalsArray = FUNDAMENTAL_CLASSES_INPUT.map((className, index) => {
 export function CSMajor(props) {
     return (
         <div>
-            <NavBar />
+            {/* <NavBar /> */}
             <div>
                 <header className="major-page">
                     <div className="container">
@@ -109,7 +109,7 @@ export function CSMajor(props) {
                     </ul>
                 </div>
             </div>
-            <Footer />
+            {/* <Footer /> */}
         </div>
 
     )

@@ -1,5 +1,5 @@
 [ 
-    {"major": "Informatics"},
+    {"major": "Informatics", "reference": "Info"},
     {"major": "Biomedical and Health Informatics"},
     {"major": "Data Science"},
     {"major": "Human-Computer Interaction"},
@@ -12,7 +12,7 @@
     {"major": "Bioengineering"},
     {"major": "Chemical Engineering"},
     {"major": "Civil Engineering"},
-    {"major": "Computer Science and Engineering"},
+    {"major": "Computer Science and Engineering", "reference": "CS"},
     {"major": "Electrical Engineering"},
     {"major": "Environmental Engineering"},
     {"major": "Human Centered Design Engineering"},

@@ -33,7 +33,7 @@ export function HomePage(props) {
 
     return (
         <div>
-            <NavBar />
+            {/* <NavBar /> */}
 
             <div style={myStyle} className='home'>
                 <h1>Confused About Major Prerequisites?</h1>
@@ -50,7 +50,7 @@ export function HomePage(props) {
 
             </div>
 
-            <Footer />
+            {/* <Footer /> */}
         </div>
     )
 

@@ -17,7 +17,7 @@ export function PostPage(props) {
     //what content should my App look like?
     return (
         <div className='post-page'>
-            <NavBar page={displayPages} currentPage={currentPage} />
+            {/* <NavBar page={displayPages} currentPage={currentPage} /> */}
             <div className='d-flex d-inline sort-filter d-none d-sm-none d-md-block'>
                 <CreatePost />
                 <SortPost />
@@ -30,7 +30,7 @@ export function PostPage(props) {
                 <PostCard />
             </div>
             <div className="col d-flex flex-column"></div>
-            <Footer />
+            {/* <Footer /> */}
         </div >
     );
 }

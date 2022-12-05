@@ -5,6 +5,9 @@ import { InfoMajor } from './InfoMajor';
 import { Major } from './Major';
 import { useState } from 'react';
 import { HomePage } from './Homepage';
+import { NavBar } from './NavBar';
+import { Footer } from './Footer';
+import {Routes, Route, Navigate} from 'react-router-dom';
 
 export default function App(props) {
     const [currData, setCurrData] = useState([])
@@ -14,13 +17,34 @@ export default function App(props) {
     //what content should my App look like?
     return (
         <div>
-            <HomePage />
-            {/* <InfoMajor /> */}
-            {/* <CSMajor /> */}
-            {/* <PostPage /> */}
-            {/* <div className='major-page'>
-                <Major currData={currData} setStoredData={setStoredData} storedData={storedData} />
-            </div> */}
+            <header>
+                <NavBar />
+            </header>
+            
+            <main>     
+                <Routes>
+                    <Route path="home" element={<HomePage />}/>
+                    <Route path="major" element={<Major />}/>
+                    <Route path="posts" element={<PostPage />}/> 
+                    <Route path="CS" element={<CSMajor />}/>
+                    <Route path="Info" element={<InfoMajor />}/>
+
+                    <Route path="/*" element={<Navigate to="/home"/>}/>
+                </Routes>
+                {/* <InfoMajor /> */}
+                {/* <CSMajor /> */}
+                {/* <div className='major-page'>
+                    <Major crrData={currData} setStoredData={setStoredData} storedData={storedData} />
+                </div>    */}
+
+            </main>
+
+            <footer>
+                <Footer />
+            </footer>
+
         </div>
+
+        
     );
 }

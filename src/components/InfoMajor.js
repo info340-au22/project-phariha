@@ -128,7 +128,7 @@ const fundamentalsArray = FUNDAMENTAL_CLASSES_INPUT.map((className, index) => {
 export function InfoMajor(props) {
     return (
         <div>
-            <NavBar />
+            {/* <NavBar /> */}
             <div>
                 <header className="major-page">
                     <div className="container">
@@ -157,7 +157,7 @@ export function InfoMajor(props) {
                     <div className="interact-list-cs">{electiveText}</div>
                 </div>
             </div>
-            <Footer />
+            {/* <Footer /> */}
         </div>
 
     )
