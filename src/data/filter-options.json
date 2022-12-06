@@ -1,0 +1,83 @@
+[
+
+    {
+        "filter" : "Department",
+        "option": "Informatics",
+        "checked": false
+    },
+    {
+        "filter" : "Department",
+        "option": "Computer Science",
+        "checked": false
+    },
+    {
+        "filter" : "Department",
+        "option": "Engineering",
+        "checked": false
+    },
+    {
+        "filter" : "Professor",
+        "option": "Joel Ross",
+        "checked": false
+    },
+    {
+        "filter" : "Professor",
+        "option": "Bob Boiko",
+        "checked": false
+    },
+    {
+        "filter" : "Professor",
+        "option": "Melanie Walsh",
+        "checked": false
+    },
+    {
+        "filter" : "Professor",
+        "option": "Jevin West",
+        "checked": false
+    },
+    {
+        "filter" : "Professor",
+        "option": "Richard Sturman",
+        "checked": false
+    },
+    {
+        "filter" : "Level",
+        "option": "100",
+        "checked": false
+    },
+    {
+        "filter" : "Level",
+        "option": "200",
+        "checked": false
+    },
+    {
+        "filter" : "Level",
+        "option": "300",
+        "checked": false
+    },
+    {
+        "filter" : "Level",
+        "option": "400",
+        "checked": false
+    },
+    {
+        "filter" : "Year",
+        "option": "2019",
+        "checked": false
+    },
+    {
+        "filter" : "Year",
+        "option": "2020",
+        "checked": false
+    },
+    {
+        "filter" : "Year",
+        "option": "2021",
+        "checked": false
+    },
+    {
+        "filter" : "Year",
+        "option": "2022",
+        "checked": false
+    }
+]
