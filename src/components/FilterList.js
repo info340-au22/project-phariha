@@ -18,6 +18,7 @@ export function FilterList(props) {
             return filterCategoryOption;
         })
 
+        // filter options
         const filterCategory =
             <ul id="post" className="filter-id" key={filterNameString.id}>
                 <a id="post" className={filterList} href="">{filterNameString.title}</a>

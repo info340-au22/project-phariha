@@ -7,19 +7,20 @@ export function FilterTrial(props) {
     const [selectedFilter, setSelectedFilter] = useState([]);
     const [checked, setChecked] = useState([]);
 
+    const [trial, setTrial] = useState([]);
+
     const showFilter = FILTER_OPTIONS.filter((filterObj) => {
         return filterObj.filter;
     })
 
+
     const filterItemArray = showFilter.map((filterObj, index) => {
         // each json object
-
         const handleClick = (event) => {
             filterObj.checked = !filterObj.checked;
 
             if (filterObj.checked) {
                 console.log(filterObj.option + " is selected");
-                console.log(filterObj.checked);
                 setSelectedFilter(filterObj.option);
             } else (
                 console.log(filterObj.option + " is deselected")
@@ -31,29 +32,33 @@ export function FilterTrial(props) {
             if (event.target.checked) {
                 updatedList = [...checked, event.filter];
                 updatedList = [...checked, filterObj.option];
-
             } else {
                 updatedList.splice(checked.indexOf(event.target.value), 1);
             }
             setChecked(updatedList);
             console.log(updatedList);
-        }    
+        }
 
+        const filterCategoryOption = <ul key={filterObj.option} className='filter-option'><input type="checkbox" onClick={handleClick} onChange={handleCheck} /><a className={filterObj} href=""></a>{filterObj.option}</ul>
 
-        const filterCategoryOption = <ul key={filterObj.option} className='filter-option'><input type="checkbox" onClick={handleClick} onChange={handleCheck}/><a className={filterObj.option} href="">{filterObj.option}</a></ul>
         return filterCategoryOption;
     })
 
     return (
         <div className='flex-column col-3 d-none d-md-block d-lg-block'>
-        <div id="post" className=' card text-dark mt-2 mx-2'>
-            <ul className='card-body list-unstyled p-2'>
-                <p id='post' className='filter-options-title'>Filter Options</p>
-                {filterItemArray}
-            </ul>
+            <div id="post" className=' card text-dark mt-2 mx-2'>
+                <ul className='card-body list-unstyled p-2'>
+                    <p id='post' className='filter-options-title'>Filter Options</p>
+                    {filterItemArray}
+                </ul>
+            </div>
         </div>
-    </div>
     )
+}
+
+function addFilter(props) {
+    console.log(props);
+    console.log("hello")
 }
 
 

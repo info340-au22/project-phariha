@@ -4,6 +4,7 @@ import { CreatePost } from './CreatePost';
 import { SortPost } from './SortPost';
 import { Footer } from './Footer';
 import { FilterList } from './FilterList';
+import { FilterTrial } from './FilterTrial';
 import { PostCard } from './PostCard';
 import { FilterButton } from './FilterButton';
 import '../index.css';
@@ -26,7 +27,7 @@ export function PostPage(props) {
                     <FilterButton />
                 </div>
             <div className='d-flex'>
-                <FilterList />
+                <FilterTrial />
                 <PostCard />
             </div>
             <div className="col d-flex flex-column"></div>
