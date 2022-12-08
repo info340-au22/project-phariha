@@ -4,44 +4,32 @@ import '../index.css';
 
 export function FilterTrial(props) {
 
-    const [selectedFilter, setSelectedFilter] = useState([]);
-    const [checked, setChecked] = useState([]);
+    const [checkBoxData, setCheckBoxData] = useState({});
 
-    const [trial, setTrial] = useState([]);
-
-    const showFilter = FILTER_OPTIONS.filter((filterObj) => {
-        return filterObj.filter;
-    })
-
-
-    const filterItemArray = showFilter.map((filterObj, index) => {
-        // each json object
-        const handleClick = (event) => {
-            filterObj.checked = !filterObj.checked;
-
-            if (filterObj.checked) {
-                console.log(filterObj.option + " is selected");
-                setSelectedFilter(filterObj.option);
-            } else (
-                console.log(filterObj.option + " is deselected")
-            )
+    const handleChange = (event) => {
+        const whichBox = event.target.name;
+        if (event.target.checked) {
+            const stateCopy = { ...checkBoxData };
+            stateCopy[whichBox] = true;
+            setCheckBoxData(filterObj=> ({
+                ...stateCopy
+            }))
+        } else {
+            const stateCopy = { ...checkBoxData };
+            stateCopy[whichBox] = false;
+            delete stateCopy[whichBox];
+            setCheckBoxData(filterObj => ({
+                ...stateCopy
+            }))
         }
+    }  
 
-        const handleCheck = (event) => {
-            let updatedList = [...checked];
-            if (event.target.checked) {
-                updatedList = [...checked, event.filter];
-                updatedList = [...checked, filterObj.option];
-            } else {
-                updatedList.splice(checked.indexOf(event.target.value), 1);
-            }
-            setChecked(updatedList);
-            console.log(updatedList);
-        }
+    // shows checked filters
+    // console.log(checkBoxData);
 
-        const filterCategoryOption = <ul key={filterObj.option} className='filter-option'><input type="checkbox" onClick={handleClick} onChange={handleCheck} /><a className={filterObj} href=""></a>{filterObj.option}</ul>
-
-        return filterCategoryOption;
+    const showFilter = FILTER_OPTIONS.map((filterObj) => {
+        const filterOption = <ul key={filterObj.option} className='filter-option'><input type="checkbox" name={filterObj.option} onChange={(e) => handleChange(e)}/><a className={filterObj.option}href="">{filterObj.option}</a></ul>
+        return filterOption;
     })
 
     return (
@@ -49,16 +37,11 @@ export function FilterTrial(props) {
             <div id="post" className=' card text-dark mt-2 mx-2'>
                 <ul className='card-body list-unstyled p-2'>
                     <p id='post' className='filter-options-title'>Filter Options</p>
-                    {filterItemArray}
+                    {showFilter}
                 </ul>
             </div>
         </div>
     )
-}
-
-function addFilter(props) {
-    console.log(props);
-    console.log("hello")
 }
 
 
