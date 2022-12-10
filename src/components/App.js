@@ -1,7 +1,6 @@
 import React from 'react';
 import { PostPage } from './PostPage'
-import { CSMajor } from './MajorInfo';
-import { InfoMajor } from './InfoMajor';
+import { MajorInfo } from './MajorInfo';
 import { Major } from './Major';
 import { useState } from 'react';
 import { HomePage } from './Homepage';
