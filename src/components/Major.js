@@ -3,9 +3,6 @@ import '../index.css';
 import data from '../data/data.json'
 import { useState } from 'react';
 import { List } from './List';
-import { NavBar } from './NavBar';
-import { Footer } from './Footer';
-
 
 export function Major(props) {
     const [inputText, setInputText] = useState("");
@@ -19,7 +16,6 @@ export function Major(props) {
 
     return (
         <div>
-            {/* <NavBar/> */}
             <header className="major-page">
                     <div className="container">
                         <div className="xs-4 sm-4 md-6">
@@ -31,7 +27,6 @@ export function Major(props) {
                     <div className='form-edit'>
                         <form id="form-control" className="p-4">
                             <input type="search bar" id="query" placeholder="Look up..." size="55" onChange={inputHandler}></input>
-                            <button>Search</button>
                         </form>
                     </div>
                 </div>
@@ -45,7 +40,6 @@ export function Major(props) {
                     </div>
                 </div>
             </div>
-            {/* <Footer/> */}
         </div>
     )
 };

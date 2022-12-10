@@ -1,11 +1,13 @@
 import React from 'react';
 import '../index.css';
 import POST_HISTORY from '../data/course-posts.json'
+import { FilterTrial, showFilter } from './FilterTrial';
 
 
 export function PostCard(props) {
 
     // const currentPage = props.currentPage;
+    console.log(props.showFilter);
 
     // only show current posts
     const showPost = POST_HISTORY.filter((postObj) => {
