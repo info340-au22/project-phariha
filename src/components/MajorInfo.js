@@ -13,8 +13,6 @@ export function MajorInfo(props) {
 
     const majorName = props.major;
     const majorData = _.find(MAJOR_DATA.majors, { major: majorName });
-    console.log(majorData);
-    console.log(majorData.prereqCSE);
 
     const prereqClassArray = [];
     const howToApplyArray = [];
