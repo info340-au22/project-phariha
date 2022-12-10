@@ -8,8 +8,6 @@ export function MajorInfo(props) {
     const prereqClasses = "Prerequisite Classes";
     const howToApply = "How to Apply";
     const graduationReqHeadding = "Graduation Requirements: Computer Science Component";
-    const fundamentals = "Fundamentals (24-25 credits)";
-    const coreAndElectives = "Core and Electives (33 credits)";
 
     const majorName = props.major;
     const majorData = _.find(MAJOR_DATA.majors, { major: majorName });
