@@ -1,13 +1,9 @@
 import React from 'react';
-import { NavBar } from './NavBar';
-import { Footer } from './Footer';
 import MAJOR_DATA from '../data/major-data.json'
-import { useParams } from 'react-router-dom';
 import _ from 'lodash';
 import '../index.css';
-import { type } from '@testing-library/user-event/dist/type';
 
-export function CSMajor(props) {
+export function MajorInfo(props) {
     const pageName = "A Guide To the University of Washington's Major System";
     const prereqClasses = "Prerequisite Classes";
     const howToApply = "How to Apply";
@@ -15,7 +11,7 @@ export function CSMajor(props) {
     const fundamentals = "Fundamentals (24-25 credits)";
     const coreAndElectives = "Core and Electives (33 credits)";
 
-    const majorName = "info";
+    const majorName = props.major;
     const majorData = _.find(MAJOR_DATA.majors, { major: majorName });
     console.log(majorData);
     console.log(majorData.prereqCSE);
