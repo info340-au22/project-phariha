@@ -3,7 +3,7 @@ import React from 'react';
 export function Footer(props) {
 
     return (
-        <footer className="text-center text-lg-start">
+        <footer className="text-center text-lg-start fixed-bottom">
             <div className="fluid-container">
                 <p>&copy; 2022 University of Washington Major Guide</p>
                 <p>Contact Us:</p>
