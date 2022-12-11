@@ -10,36 +10,7 @@
         "option": "Computer Science",
         "checked": false
     },
-    {
-        "filter" : "Department",
-        "option": "Engineering",
-        "checked": false
-    },
-    {
-        "filter" : "Professor",
-        "option": "Joel Ross",
-        "checked": false
-    },
-    {
-        "filter" : "Professor",
-        "option": "Bob Boiko",
-        "checked": false
-    },
-    {
-        "filter" : "Professor",
-        "option": "Melanie Walsh",
-        "checked": false
-    },
-    {
-        "filter" : "Professor",
-        "option": "Jevin West",
-        "checked": false
-    },
-    {
-        "filter" : "Professor",
-        "option": "Richard Sturman",
-        "checked": false
-    },
+    
     {
         "filter" : "Level",
         "option": "100",
@@ -61,23 +32,73 @@
         "checked": false
     },
     {
-        "filter" : "Year",
-        "option": "2019",
+        "filter" : "Professor",
+        "option": "Bob Boiko",
         "checked": false
     },
     {
-        "filter" : "Year",
-        "option": "2020",
+        "filter" : "Professor",
+        "option": "Batya Friedman",
         "checked": false
     },
     {
-        "filter" : "Year",
-        "option": "2021",
+        "filter" : "Professor",
+        "option": "Greg Hay",
         "checked": false
     },
     {
-        "filter" : "Year",
-        "option": "2022",
+        "filter" : "Professor",
+        "option": "Anna Hoffman",
+        "checked": false
+    },
+    {
+        "filter" : "Professor",
+        "option": "Joseph Janes",
+        "checked": false
+    },
+    {
+        "filter" : "Professor",
+        "option": "Kevin Lin",
+        "checked": false
+    },
+    {
+        "filter" : "Professor",
+        "option": "Ryan Maas",
+        "checked": false
+    },
+    {
+        "filter" : "Professor",
+        "option": "Miya Natsuhara",
+        "checked": false
+    },
+    {
+        "filter" : "Professor",
+        "option": "Stuart Reges",
+        "checked": false
+    },
+    {
+        "filter" : "Professor",
+        "option": "Joel Ross",
+        "checked": false
+    },    
+    {
+        "filter" : "Professor",
+        "option": "Hunter Schafer",
+        "checked": false
+    },
+    {
+        "filter" : "Professor",
+        "option": "Linda Shapiro",
+        "checked": false
+    },
+    {
+        "filter" : "Professor",
+        "option": "Robbie Weber",
+        "checked": false
+    },
+    {
+        "filter" : "Professor",
+        "option": "Jeremy Zaretzky",
         "checked": false
     }
 ]
