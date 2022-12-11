@@ -39,24 +39,11 @@ export function PostPage(props) {
     }, [])
 
    
-    const displayPages = ['homepage', 'major', 'post'];
-    const currentPage = "homepage";
-
-    const handleClick = (event) => {
-        console.log("you clicked create post!");
-    }
-
-   
     return (
         <div className='post-page'>
             {/* <NavBar page={displayPages} currentPage={currentPage} /> */}
             <div className='d-flex d-inline sort-filter d-none d-sm-none d-md-block'>
-                {/* <CreatePost /> */}
-                <Link to="../create-post">
-                    <button className="create-post mx-2 mt-3" type="button" onClick={handleClick}>
-                        Create New Post
-                    </button>
-                </Link>
+                <Link to="/ComposePostForm" className="btn btn-primary create-post mx-2 mt-3">Create New Post</Link>
                 <SortPost />
             </div>
             <div className='sort-filter-modal d-block d-md-none d-lg-none'>
@@ -64,7 +51,7 @@ export function PostPage(props) {
             </div>
             <div className='d-flex'>
                 <FilterTrial />
-                <PostCard />
+                <PostCard newPosts={newPosts}/>
             </div>
             <div className="col d-flex flex-column"></div>
             {/* <Footer /> */}

@@ -88,6 +88,17 @@ export function PostCard(props) {
         return element;
     })
 
+    const newPostArray = newPosts.map((postObj) => {
+        console.log(postObj);
+            const element = (
+                <PostItem 
+                    postData={postObj}
+                    key={postObj.date}
+                />
+            )
+            return element;
+        })    
+
     const showFilter = FILTER_OPTIONS.map((filterObj) => {
         const filterOption = <ul key={filterObj.option} className='filter-option'><input type="checkbox" name={filterObj.option} onChange={(e) => handleChange(e)} /><a>&nbsp;{filterObj.option}</a></ul>
         return filterOption;
@@ -106,6 +117,7 @@ export function PostCard(props) {
             <div id='post' className="scrollable-pane flex-grow-1 d-flex-inline">
                 <div id='post' className="mt-2 mx-2">
                     {postItemArray}
+                    {newPostArray} 
                 </div>
             </div>
         </div>

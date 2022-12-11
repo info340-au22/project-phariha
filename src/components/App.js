@@ -29,7 +29,7 @@ export default function App(props) {
                     <Route path="posts" element={<PostPage />}/> 
                     <Route path="CS" element={<MajorInfo major={'cse'}/>}/>
                     <Route path="Info" element={<MajorInfo major={'info'}  />}/>
-                    <Route path="create-post" element={<CreatePost />}/>
+                   
                     <Route path="/*" element={<Navigate to="/home"/>}/>
                     <Route path="/ComposePostForm" element={<ComposePostForm/>}/>
                 </Routes>
