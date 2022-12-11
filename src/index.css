@@ -270,6 +270,16 @@ header.major-page {
   font-size: 150%;
 }
 
+.submit-post {
+  font-size: x-large;
+  margin-bottom: 1rem;
+  color: white;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.25rem;
+  text-align: center;
+  
+}
+
 button.create-post {
   background-color: #483d8b;
   color: white;
@@ -380,6 +390,7 @@ button#post.sort-filter {
     margin-left: 15rem;
   }
 
+    
   @media (max-width: 640px) {
 
     #post.date {
