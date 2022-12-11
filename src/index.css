@@ -113,6 +113,11 @@ footer p {
   margin: 0 2em 1em 2em;
 }
 
+.cardimg {
+  max-width: 300px;
+  padding: 3em 3em 2em 4em;
+}
+
 @keyframes fadeIn {
   0% {
     opacity: 0;
@@ -139,6 +144,8 @@ footer p {
   }
 
 }
+
+
 
 /* -------------------------- CS Major Page -------------------*/
 .interact-h1 {
@@ -406,4 +413,21 @@ button#post.sort-filter {
     }
   }
 
+}
+
+/* --------------------ComposePostForm---------------------- */
+.compost-post-header {
+  text-align: center;
+}
+
+.compose-post-container {
+  display: flex;
+  margin: auto;
+  height: auto;
+  width: 500px;
+  flex-direction: column;
+  place-items: center;
+  padding: 20px;
+  border-radius: 12px;
+  background-color: #d0cce6;
 }

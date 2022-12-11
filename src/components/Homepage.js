@@ -23,7 +23,7 @@ export function HomePage(props) {
 
     const imageCards = WIT_cards.map((wImageCard, index) => {
         return <div key={index} className='home card'>
-            <img className="card-img-top" src={wImageCard.pic} alt={wImageCard.title} />
+            <img className="cardimg" src={wImageCard.pic} alt={wImageCard.title} />
             <div className="card-body">
                 <h3 className="card-title">{wImageCard.title}</h3>
                 <p className="card-text">{wImageCard.text}</p>

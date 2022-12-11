@@ -8,6 +8,7 @@ import { NavBar } from './NavBar';
 import { Footer } from './Footer';
 import {Routes, Route, Navigate} from 'react-router-dom';
 import { CreatePost } from './CreatePost';
+import { ComposePostForm } from './ComposePostForm';
 
 export default function App(props) {
     const [currData, setCurrData] = useState([])
@@ -30,12 +31,9 @@ export default function App(props) {
                     <Route path="Info" element={<MajorInfo major={'info'}  />}/>
                     <Route path="create-post" element={<CreatePost />}/>
                     <Route path="/*" element={<Navigate to="/home"/>}/>
+                    <Route path="/ComposePostForm" element={<ComposePostForm/>}/>
                 </Routes>
-                {/* <InfoMajor /> */}
-                {/* <CSMajor /> */}
-                {/* <div className='major-page'>
-                    <Major crrData={currData} setStoredData={setStoredData} storedData={storedData} />
-                </div>    */}
+                 
 
             </main>
 

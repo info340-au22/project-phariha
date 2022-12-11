@@ -6,8 +6,7 @@ import { FilterTrial, showFilter } from './FilterTrial';
 
 export function PostCard(props) {
 
-    // const currentPage = props.currentPage;
-    console.log(props.showFilter);
+    const newPosts = props.newPosts;
 
     // only show current posts
     const showPost = POST_HISTORY.filter((postObj) => {
@@ -24,10 +23,29 @@ export function PostCard(props) {
         return element;
     })
 
+    // *databaseinfo* will be passed as a prop to PostCard (newPosts) 
+    const newPostArray = newPosts.map((postObj) => {
+        console.log(postObj);
+            const element = (
+                <PostItem 
+                    postData={postObj}
+                    key={postObj.date}
+                />
+            )
+            return element;
+        })    
+        //***(array resulting from the mapping of new post data)***
+        // if(newPostArray.length === 0){
+        //     return <p>No new posts yet!</p>
+        //   }
+
+
     return (
         <div id='post' className="scrollable-pane flex-grow-1">
             <div id='post' className="mt-2 mx-2">
                 {postItemArray}
+                {newPostArray} 
+                {/* array of new posts in sync with firebase */}
             </div>
         </div>
     )
