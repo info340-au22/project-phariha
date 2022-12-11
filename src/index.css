@@ -369,6 +369,10 @@ button#post.sort-filter {
   color: white;
 }
 
+.post-page .create-post-button {
+  border: 5rem;
+}
+
 @media (min-width: 992px) {
   .interact-h1 {
     margin-left: 10rem;

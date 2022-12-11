@@ -1,4 +1,4 @@
-import { React } from 'react';
+import React, { useState, useEffect } from 'react';
 import { NavBar } from './NavBar';
 import { CreatePost } from './CreatePost';
 import { PostCard } from './PostCard';
@@ -43,17 +43,12 @@ export function PostPage(props) {
         <div className='post-page'>
             {/* <NavBar page={displayPages} currentPage={currentPage} /> */}
             <div className='d-flex d-inline sort-filter d-none d-sm-none d-md-block'>
-                <Link to="/ComposePostForm" className="btn btn-primary create-post mx-2 mt-3">Create New Post</Link>
-                <SortPost />
+                <Link to="/ComposePostForm" className="create-post-button btn btn-primary create-post mx-2 mt-3">Create New Post</Link>
             </div>
-            <div className='sort-filter-modal d-block d-md-none d-lg-none'>
-                <FilterButton />
-            </div>
-            <div className='d-flex'>
-                <FilterTrial />
+           
+            <div className=''>
                 <PostCard newPosts={newPosts}/>
             </div>
-            <div className="col d-flex flex-column"></div>
             {/* <Footer /> */}
         </div >
     );

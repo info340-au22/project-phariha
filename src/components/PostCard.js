@@ -5,6 +5,8 @@ import COURSE_POSTS from '../data/course-posts.json';
 
 
 export function PostCard(props) {
+    const newPosts = props.newPosts;
+
     const [displayedPosts, setDisplayedPosts] = useState([]);
     const [clickedOptions, setClickedOptions] = useState([]);
     const handleChange = (event) => {
@@ -105,8 +107,8 @@ export function PostCard(props) {
     })
 
     return (
-        <div>
-            <div className='flex-column mx-4'>
+        <div className='d-flex'>
+            <div className='flex-row mx-4'>
                 <div id="post" className='card text-dark mt-2 mx-2 d-flex-inline'>
                     <ul className='card-body list-unstyled p-2'>
                         <p id='post' className='filter-options-title'>Filter Options</p>
@@ -115,12 +117,12 @@ export function PostCard(props) {
                 </div>
             </div>
             <div id='post' className="scrollable-pane flex-grow-1 d-flex-inline">
-                <div id='post' className="mt-2 mx-2">
+                <div id='post' className="mt-2 mx-2"> 
                     {postItemArray}
                     {newPostArray} 
                 </div>
             </div>
-        </div>
+         </div>
     )
 }
 
