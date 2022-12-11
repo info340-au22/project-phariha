@@ -76,8 +76,8 @@ export function ComposePostForm(props) {
         // formArray = [userName, date, major, course, professor, courseranking, difficulty, homeworkload, takeagain, recommend]
         // addPost(formArray);
 
-        addPost(userName) //call the function
-        // addPost(date);
+        addUserName(userName) //call the function
+        addDate(date);
         // addPost(major);
         // addPost(course);
         // addPost(professor);
@@ -113,15 +113,24 @@ export function ComposePostForm(props) {
       //       "timestamp": Date.now(),
       //   } 
       
-      const addPost = (userName) => {
+    const addUserName = (userName) => {
         const newPost = {
             "userName": userName,
             "timestamp": Date.now(),
-            //
         } 
         const db = getDatabase(); //"the database"
         const allNewPostsRef = ref(db, 'allNewPosts');
         firebasePush(allNewPostsRef, newPost);
+    }
+
+    const addDate = (date) => {
+      const newPost = {
+          "date": date,
+          "timestamp": Date.now(),
+      } 
+      const db = getDatabase(); //"the database"
+      const allNewPostsRef = ref(db, 'allNewPosts');
+      firebasePush(allNewPostsRef, newPost);
     }
       
            
