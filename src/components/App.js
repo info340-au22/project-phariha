@@ -7,6 +7,7 @@ import { HomePage } from './Homepage';
 import { NavBar } from './NavBar';
 import { Footer } from './Footer';
 import {Routes, Route, Navigate} from 'react-router-dom';
+import { CreatePost } from './CreatePost';
 
 export default function App(props) {
     const [currData, setCurrData] = useState([])
@@ -27,7 +28,7 @@ export default function App(props) {
                     <Route path="posts" element={<PostPage />}/> 
                     <Route path="CS" element={<MajorInfo major={'cse'}/>}/>
                     <Route path="Info" element={<MajorInfo major={'info'}  />}/>
-
+                    <Route path="create-post" element={<CreatePost />}/>
                     <Route path="/*" element={<Navigate to="/home"/>}/>
                 </Routes>
                 {/* <InfoMajor /> */}

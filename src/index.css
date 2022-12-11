@@ -11,6 +11,7 @@
   padding-bottom: 1rem;
   padding-top: 1rem;
   margin-bottom: .25rem;
+  font-size: 125%;
 
 }
 
@@ -71,7 +72,7 @@ footer p {
   padding-left: 1rem;
   color: white;
   background-color: #483d8b;
-  font-size: small;
+  font-size: medium;
 }
 
 /*-------------------------HOME PAGE-------------------------*/
@@ -246,6 +247,29 @@ header.major-page {
 
 /* --------------- Post Page -------------- */
 
+/* create pot */
+.create-post-form {
+  margin-top: 2rem;
+  margin-left: 5rem;
+  margin-bottom: 2rem;
+  font-size: 125%;
+}
+
+.create-post-heading {
+  margin-top: 2rem;
+  color: #483d8b;
+  text-align: center;
+  font-size: 350%;
+}
+
+.create-post-text {
+  margin-top: 0.5rem;
+  margin-right: 3rem;
+  margin-left: 3rem;
+  text-align: center;
+  font-size: 150%;
+}
+
 button.create-post {
   background-color: #483d8b;
   color: white;
@@ -351,6 +375,11 @@ button#post.sort-filter {
     margin-left: 1rem;
   }
 
+  
+  .create-post-form {
+    margin-left: 15rem;
+  }
+
   @media (max-width: 640px) {
 
     #post.date {
@@ -365,4 +394,5 @@ button#post.sort-filter {
       font-size: 3vw;
     }
   }
+
 }
