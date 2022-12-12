@@ -5,7 +5,7 @@ import { getDatabase, ref, set as firebaseSet, onValue, push as firebasePush } f
 
 export function ComposePostForm(props) {
     const [userName, setUserName] = useState("");
-    const [date, setDate] = useState("");
+    // const [date, setDate] = useState("");
     const [major, setMajor] = useState("");
     const [course, setCourse] = useState("");
     const [professor, setProfessor] = useState("");
@@ -19,10 +19,10 @@ export function ComposePostForm(props) {
         const inputtedValue = event.target.value;
         setUserName(inputtedValue); //update state and re-render!
     }
-    const handleDate = (event) => {
-        const inputtedValue = event.target.value;
-        setDate(inputtedValue); //update state and re-render!
-    }
+    // const handleDate = (event) => {
+    //     const inputtedValue = event.target.value;
+    //     setDate(inputtedValue); //update state and re-render!
+    // }
       
     const handleMajor = (event) => {
       const inputtedValue = event.target.value;
@@ -69,12 +69,15 @@ export function ComposePostForm(props) {
         event.preventDefault();
         console.log("submitting", userName);
 
-        let formObject = {"userName": userName, "date": date, "major": major, "course": course, "professor": professor, "courseRating": courseRating, "difficulty": difficulty, "homeworkLoad" : homeworkLoad, "takeAgain": takeAgain, "recommend": recommend}
+        const date = new Date();
+        let currentDate = date.toLocaleDateString();
+
+        let formObject = {"userName": userName, "date": currentDate, "major": major, "course": course, "professor": professor, "courseRating": courseRating, "difficulty": difficulty, "homeworkLoad" : homeworkLoad, "takeAgain": takeAgain, "recommend": recommend}
 
         addFormObject(formObject);
 
         setUserName(""); //empty the inputs!
-        setDate("");
+        // setDate("");
         setMajor("");
         setCourse("");
         setProfessor("");
@@ -85,7 +88,6 @@ export function ComposePostForm(props) {
         setRecommend("");
     }
 
-
     const addFormObject = (formObject) => {
       console.log(formObject);
       const newPost = 
@@ -95,6 +97,20 @@ export function ComposePostForm(props) {
       const allNewPostsRef = ref(db, 'allNewPosts');
       firebasePush(allNewPostsRef, newPost);
     }
+
+    const form = document.querySelector('form');
+    form.addEventListener('submit', function(event) {
+      event.preventDefault();
+      if (form.checkValidity()) {
+        form.classList.add('d-none');
+        let alertP = document.querySelector('p');
+        alertP.classList.remove('d-none');
+      } else {
+        form.classList.add('was-validated');
+        let button = document.querySelector('button');
+        button.disabled = true;
+      }
+    })
            
     
 
@@ -104,15 +120,15 @@ export function ComposePostForm(props) {
             <form className="my-2" onSubmit={handleSubmit}>
               <div className="input-group">
                 <div className='col-9'>
-                  <label>UserName:
+                  <label>Name:
                     <input className ='row' type="text" onChange={handleUserName}></input>
                   </label>
                 </div>
-                <div className='col-9'>
+                {/* <div className='col-9'>
                     <label>Date:
                       <input className='row' type="text" onChange={handleDate}></input>
                     </label>
-                </div>
+                </div> */}
                 <div className='col-9'>
                   <label>Major:
                     <input className='row' type="text" onChange={handleMajor}></input>
@@ -154,7 +170,7 @@ export function ComposePostForm(props) {
                   </label>
                 </div>
               </div>
-              <button className='row compose-form btn btn-secondary' type='submit' disabled={false}>Submit</button>
+              <button className='row compose-form btn btn-secondary' type='submit' disabled={true}>Submit</button>
             </form>
         </div>
       );

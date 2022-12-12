@@ -306,15 +306,14 @@ header.major-page {
   padding: 0.25rem 0.5rem;
   border-radius: 0.25rem;
   text-align: center;
-  
 }
 
-button.create-post {
+.postbutton {
   background-color: #483d8b;
   color: white;
-  padding: 0.25rem 0.5rem;
+  padding: 0.5rem 0.25rem;
   border-radius: 0.25rem;
-
+  position: center;
 }
 
 #post h1 {
