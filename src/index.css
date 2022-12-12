@@ -3,6 +3,15 @@
   padding: 0px;
 }
 
+#page-container {
+  position: relative;
+  min-height: 100vh;
+}
+
+#content-wrap {
+  padding-bottom: 2.5rem;
+}
+
 .nav-bar {
   background-color: #483d8b;
   top: 0;
@@ -67,13 +76,26 @@
   cursor: pointer;
 }
 
+#footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 2.5rem;
+}
+
 footer p {
   margin: 0;
   padding-left: 1rem;
   color: white;
-  background-color: #483d8b;
   font-size: medium;
 }
+
+.app-footer {
+  background-color: #483d8b;
+  padding: 1rem;
+  margin-top: 2rem;
+}
+
 /*-------------------------HOME PAGE-------------------------*/
 .home h1 {
   font-size: 5rem;
@@ -302,21 +324,20 @@ button.create-post {
   font-size: 1.5rem;
 }
 
-#post .post-date {
-  font-size: 1rem;
-}
-
 #post .card-title {
   background-color: lavender;
 }
 
-#post.sort-post {
-  float: right;
-  margin-right: 1rem;
+#post.filter-options-title {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 2rem;
+  /* margin: 0; */
 }
 
-#post.filter-options-title {
-  font-size: 2rem;
+#post.filter-options-p {
+  font-size: 0.75rem;
 }
 
 #post.user-name {
@@ -325,13 +346,14 @@ button.create-post {
   display: inline;
 }
 
-div.col-2 {
-  overflow: hidden;
+#post.col-sm-4 {
+  height: max-content;
+  padding: 0;
 }
 
 #post.date {
   float: right;
-  font-size: 2rem;
+  font-size: 1.5rem;
   color: grey;
 }
 
@@ -340,18 +362,15 @@ ul.filter-option {
   background-color: lavender;
 }
 
-a#post {
-  font-weight: bold;
+#post a {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 ul#post.filter-id {
   padding: 0;
   margin-bottom: 1.5rem;
-}
-
-ul#post.sort-modal {
-  padding: 0;
-  background-color: lavender;
 }
 
 
@@ -365,10 +384,6 @@ button#post.sort-filter {
   background-color: #483d8b;
 }
 
-#post .fa.fa-filter {
-  color: white;
-}
-
 .post-page .create-post-button {
   border: 5rem;
 }
@@ -380,7 +395,7 @@ button#post.sort-filter {
 
   .card-deck {
     display: flex;
-  } 
+  }
 
   .interact-h2 {
     margin-left: 13rem;
@@ -395,27 +410,34 @@ button#post.sort-filter {
     margin-left: 1rem;
   }
 
-  
   .create-post-form {
     margin-left: 15rem;
   }
+}
 
-    
-  @media (max-width: 640px) {
+@media (max-width: 810px) {
 
-    #post.date {
-      font-size: 5vw;
-    }
+  #post.filter-options-title {
+    font-size: 1.5rem;
+  }
+ 
+}
 
-    #post.user-name {
-      font-size: 5vw;
-    }
+@media (max-width: 700px) {
 
-    #post .card-contents {
-      font-size: 3vw;
-    }
+  #post.filter-options-title {
+    font-size: 1rem;
   }
 
+  #post a {
+    font-size: 0.75rem;
+  }
+
+  #post.ul.filter-option {
+    padding: 0;
+    padding-left: 0;
+    display: inline;
+  }
 }
 
 /* --------------------ComposePostForm---------------------- */

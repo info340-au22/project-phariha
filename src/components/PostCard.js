@@ -54,7 +54,7 @@ export function PostCard(props) {
                 if (option != undefined) {
                     
                     COURSE_POSTS.map((post) => {
-                    
+                        console.log(post.professor);
                         if (option.name === post.major) {
                             setDisplayedPosts(displayedPosts => displayedPosts.concat(post));
                         }
@@ -80,22 +80,22 @@ export function PostCard(props) {
 
     //});
     
-    const postItemArray = displayedPosts.map((postObj) => {
-       
+    const postItemArray = displayedPosts.map((postObj, index) => {
         const element = (
             <PostItem
                 postData={postObj}
-                key={postObj.date}
+                key={index}
             />
         )
         return element;
     })
 
-    const newPostArray = newPosts.map((postObj) => { 
+    const newPostArray = newPosts.map((postObj) => {
+        console.log(postObj);
             const element = (
                 <PostItem 
                     postData={postObj}
-                    key={postObj.key}
+                    key={postObj.date}
                 />
             )
             return element;
@@ -107,22 +107,23 @@ export function PostCard(props) {
     })
 
     return (
-        <div className='d-flex'>
-            <div className='flex-row mx-4'>
-                <div id="post" className='card text-dark mt-2 mx-2 d-flex-inline'>
-                    <ul className='card-body list-unstyled p-2'>
-                        <p id='post' className='filter-options-title'>Filter Options</p>
-                        {showFilter}
-                    </ul>
+        <div className='container-fluid'>
+            <div className='row'>
+                    <div id="post" className='col-sm-4 col-lg-3 card text-dark mt-2 mx-2'>
+                        <ul className='card-body list-unstyled p-2'>
+                            <p id='post' className='filter-options-title'>Filter Options</p>
+                            <p id='post' className='filter-options-p'>Please select filter(s) to view content</p>
+                            {showFilter}
+                        </ul>
+                    </div>
+                <div id='post' className="col-sm scrollable-pane flex-grow-1 d-inline">
+                    <div id='post' className="mt-2 mx-2">
+                        {postItemArray}
+                        {newPostArray}
+                    </div>
                 </div>
             </div>
-            <div id='post' className="scrollable-pane flex-grow-1 d-flex-inline">
-                <div id='post' className="mt-2 mx-2"> 
-                    {postItemArray}
-                    {newPostArray} 
-                </div>
-            </div>
-         </div>
+        </div>
     )
 }
 
@@ -139,8 +140,8 @@ function PostItem(props) {
                         <p id='post' className='date m-0'>{date}</p>
                     </div>
 
-                    <p id='post' className='course m-0'>Username: {userName}</p>
-                    <p id='post' className='major m-0'>Major: {major}</p>  
+                    <p id='post' className='major m-0'>Major: {major}</p>
+                    <p id='post' className='course m-0'>Course: {course}</p>
                     <p id='post' className='professor m-0'>Professor: {professor}</p>
                     <p id='post' className='courseRating m-0'>Course Rating: {courseRating}</p>
                     <p id='post' className='difficulty m-0'>Difficulty: {difficulty}</p>
