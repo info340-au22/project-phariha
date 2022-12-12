@@ -45,7 +45,7 @@ export function PostPage(props) {
         <div className='post-page'>
             
             <div className='d-flex d-inline sort-filter d-none d-sm-none d-md-block'>
-                <Link to="/ComposePostForm" className="create-post-button btn btn-primary create-post mx-2 mt-3">Create New Post</Link>
+                <Link to="/ComposePostForm" className="postbutton btn mx-5 mt-3">&nbsp;Create New Post&nbsp;</Link>
             </div>
            
             <div className=''>
