@@ -491,3 +491,8 @@ button#post.sort-filter {
   border-radius: 12px;
   background-color: #d0cce6;
 }
+
+.submit-form-button {
+  margin-top: 1em;
+  margin-bottom: 1em;
+}

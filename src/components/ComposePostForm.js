@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { getDatabase, ref, set as firebaseSet, onValue, push as firebasePush } from 'firebase/database' //realtime
-
+import { Link } from 'react-router-dom';
 // this component adds a post to the database 
 
 export function ComposePostForm(props) {
@@ -98,20 +98,11 @@ export function ComposePostForm(props) {
       firebasePush(allNewPostsRef, newPost);
     }
 
-    const form = document.querySelector('form');
-    form.addEventListener('submit', function(event) {
-      event.preventDefault();
-      if (form.checkValidity()) {
-        form.classList.add('d-none');
-        let alertP = document.querySelector('p');
-        alertP.classList.remove('d-none');
-      } else {
-        form.classList.add('was-validated');
-        let button = document.querySelector('button');
-        button.disabled = true;
-      }
-    })
-           
+    const successMessage = () => {
+      let alertP = document.querySelector('p');
+      alertP.className = '';
+      console.log(alertP);
+    }
     
 
     return (
@@ -160,17 +151,27 @@ export function ComposePostForm(props) {
                   </label>
                 </div>
                 <div className="col-9">
-                  <label>Take Again:
+                  <label>Take Again ?:
                     <input className="row" type="text" onChange={handleTakeAgain}></input>
                   </label>
                 </div>
                 <div className="col-9">
-                  <label>Recommend:
+                  <label>Recommend ?:
                     <input className="row" type="text" onChange={handleRecommend}></input>
                   </label>
                 </div>
               </div>
-              <button className='row compose-form btn btn-secondary' type='submit' disabled={true}>Submit</button>
+              
+              <button className='submit-form-button row compose-form btn btn-secondary' type='submit' disabled={false} onClick={successMessage}>Submit</button> 
+              <p className="d-none">You succesfully created a post! Return to Posts page to view your contribution.</p>
+              {/* <div className="submit-post mx-2 mt-3">
+                  <Link to="../posts">
+                  <button type="submit" className='row compose-form btn btn-secondary' disabled={false}>
+                      &nbsp;Submit&nbsp;
+                  </button>
+                  </Link>
+              </div> */}
+              
             </form>
         </div>
       );
