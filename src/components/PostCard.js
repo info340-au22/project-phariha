@@ -130,7 +130,7 @@ export function PostCard(props) {
 
 function PostItem(props) {
 
-    const { userName, date, major, course, professor, courseRating, difficulty, homeworkLoad, takeAgain, recommend } = props.postData;
+    const { date, major, course, professor, courseRating, difficulty, homeworkLoad, takeAgain, recommend } = props.postData;
     return (
         <div id='post' className="card message d-flex mb-2 fs-5">
             <div id='post' className="card-body flex-grow-1">
