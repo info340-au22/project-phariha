@@ -54,7 +54,7 @@ export function PostCard(props) {
                 if (option != undefined) {
                     
                     COURSE_POSTS.map((post) => {
-                        console.log(post.professor);
+                    
                         if (option.name === post.major) {
                             setDisplayedPosts(displayedPosts => displayedPosts.concat(post));
                         }
@@ -80,22 +80,22 @@ export function PostCard(props) {
 
     //});
     
-    const postItemArray = displayedPosts.map((postObj, index) => {
+    const postItemArray = displayedPosts.map((postObj) => {
+       
         const element = (
             <PostItem
                 postData={postObj}
-                key={index}
+                key={postObj.date}
             />
         )
         return element;
     })
 
-    const newPostArray = newPosts.map((postObj) => {
-        console.log(postObj);
+    const newPostArray = newPosts.map((postObj) => { 
             const element = (
                 <PostItem 
                     postData={postObj}
-                    key={postObj.date}
+                    key={postObj.key}
                 />
             )
             return element;
@@ -135,12 +135,12 @@ function PostItem(props) {
                 <div id='post' className='card-contents'>
 
                     <div className='card-title flex-column'>
-                        <p id='post' className="user-name m-0 col mx-2">{userName}</p>
+                        <p id='post' className="user-name m-0 col mx-2">{course}</p>
                         <p id='post' className='date m-0'>{date}</p>
                     </div>
 
-                    <p id='post' className='major m-0'>Major: {major}</p>
-                    <p id='post' className='course m-0'>Course: {course}</p>
+                    <p id='post' className='course m-0'>Username: {userName}</p>
+                    <p id='post' className='major m-0'>Major: {major}</p>  
                     <p id='post' className='professor m-0'>Professor: {professor}</p>
                     <p id='post' className='courseRating m-0'>Course Rating: {courseRating}</p>
                     <p id='post' className='difficulty m-0'>Difficulty: {difficulty}</p>

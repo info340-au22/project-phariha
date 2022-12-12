@@ -9,14 +9,11 @@ export function ComposePostForm(props) {
     const [major, setMajor] = useState("");
     const [course, setCourse] = useState("");
     const [professor, setProfessor] = useState("");
-    const [courseranking, setCourseRanking] = useState("");
+    const [courseRating, setCourseRating] = useState("");
     const [difficulty, setDifficulty] = useState("");
-    const [homeworkload, setHomeworkLoad] = useState("");
-    const [takeagain, setTakeAgain] = useState("");
+    const [homeworkLoad, setHomeworkLoad] = useState("");
+    const [takeAgain, setTakeAgain] = useState("");
     const [recommend, setRecommend] = useState("");
-
-    // const addPostCallback = props.addPostCallback;
-    // console.log(addPostCallback);
 
     const handleUserName = (event) => {
         const inputtedValue = event.target.value;
@@ -42,9 +39,9 @@ export function ComposePostForm(props) {
       setProfessor(inputtedValue); //update state and re-render!
     }
 
-    const handleCourseRanking = (event) => {
+    const handleCourseRating = (event) => {
       const inputtedValue = event.target.value;
-      setCourseRanking(inputtedValue); //update state and re-render!
+      setCourseRating(inputtedValue); //update state and re-render!
     }
 
     const handleDifficulty = (event) => {
@@ -68,75 +65,37 @@ export function ComposePostForm(props) {
     }
 
    
-
     const handleSubmit = (event) => {
         event.preventDefault();
         console.log("submitting", userName);
 
-        // formArray = [userName, date, major, course, professor, courseranking, difficulty, homeworkload, takeagain, recommend]
-        // addPost(formArray);
+        let formObject = {"userName": userName, "date": date, "major": major, "course": course, "professor": professor, "courseRating": courseRating, "difficulty": difficulty, "homeworkLoad" : homeworkLoad, "takeAgain": takeAgain, "recommend": recommend}
 
-        addUserName(userName) //call the function
-        addDate(date);
-        // addPost(major);
-        // addPost(course);
-        // addPost(professor);
-        // addPost(courseranking);
-        // addPost(difficulty);
-        // addPost(homeworkload);
-        // addPost(takeagain);
-        // addPost(recommend);
-        setUserName(""); //empty the input!
+        addFormObject(formObject);
+
+        setUserName(""); //empty the inputs!
         setDate("");
         setMajor("");
         setCourse("");
         setProfessor("");
-        setCourseRanking("");
+        setCourseRating("");
         setDifficulty("");
         setHomeworkLoad("");
         setTakeAgain("");
         setRecommend("");
     }
-      // have addPost take in an array of values and map to the corresponding labels ??
-      // const addPost = (postText) => {
-      //   const newPost = {
-      //       "username":postText,
-      //       "date": postText,
-      //       "major": postText,
-      //       "course": postText,
-      //       "professor":postText,
-      //       "courseranking":postText,
-      //       "difficulty":postText,
-      //       "homeworkload":postText,
-      //       "takeagain":postText,
-      //       "recommend":postText,
-      //       "timestamp": Date.now(),
-      //   } 
-      
-    const addUserName = (userName) => {
-        const newPost = {
-            "userName": userName,
-            "timestamp": Date.now(),
-        } 
-        const db = getDatabase(); //"the database"
-        const allNewPostsRef = ref(db, 'allNewPosts');
-        firebasePush(allNewPostsRef, newPost);
-    }
 
-    const addDate = (date) => {
-      const newPost = {
-          "date": date,
-          "timestamp": Date.now(),
-      } 
+
+    const addFormObject = (formObject) => {
+      console.log(formObject);
+      const newPost = 
+          formObject;
+      
       const db = getDatabase(); //"the database"
       const allNewPostsRef = ref(db, 'allNewPosts');
       firebasePush(allNewPostsRef, newPost);
     }
-      
            
-        
-    
-      
     
 
     return (
@@ -144,7 +103,6 @@ export function ComposePostForm(props) {
           <h1 className="compost-post-header">Create a Post</h1>        
             <form className="my-2" onSubmit={handleSubmit}>
               <div className="input-group">
-                {/* <textarea className="form-control" rows="2" placeholder='Review a course' onChange={handleChange}></textarea> */}
                 <div className='col-9'>
                   <label>UserName:
                     <input className ='row' type="text" onChange={handleUserName}></input>
@@ -172,7 +130,7 @@ export function ComposePostForm(props) {
                 </div>
                 <div className='col-9'>
                   <label>Course Ranking (1-5):
-                    <input className="row" type="text" onChange={handleCourseRanking}></input>
+                    <input className="row" type="text" onChange={handleCourseRating}></input>
                   </label>
                 </div>
                 <div className="col-9">

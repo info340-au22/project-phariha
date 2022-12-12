@@ -20,14 +20,16 @@ export function PostPage(props) {
         //when db value changes
         const offFunction = onValue(allNewPostsRef, (snapshot) => {
             const valueObj = snapshot.val();
-            // convert object into array
+            // extract confusing keys from object, creates an array of confusing keys(objKeys)
             const objKeys = Object.keys(valueObj);
+            
             const objArray = objKeys.map((keyString) => {
+                // take each keyString and use it to extract each value(object) it is associated with in valueObj
                 const postObj = valueObj[keyString];
                 postObj.key = keyString;
                 return postObj;
             })
-            console.log(objArray);
+            // set this array of objects to newPosts
             setNewPosts(objArray);
         })
 
@@ -41,7 +43,7 @@ export function PostPage(props) {
    
     return (
         <div className='post-page'>
-            {/* <NavBar page={displayPages} currentPage={currentPage} /> */}
+            
             <div className='d-flex d-inline sort-filter d-none d-sm-none d-md-block'>
                 <Link to="/ComposePostForm" className="create-post-button btn btn-primary create-post mx-2 mt-3">Create New Post</Link>
             </div>
@@ -49,7 +51,7 @@ export function PostPage(props) {
             <div className=''>
                 <PostCard newPosts={newPosts}/>
             </div>
-            {/* <Footer /> */}
+            
         </div >
     );
 }
