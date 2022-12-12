@@ -95,7 +95,7 @@ export function PostCard(props) {
             const element = (
                 <PostItem 
                     postData={postObj}
-                    key={postObj.date}
+                    key={postObj.key}
                 />
             )
             return element;
@@ -130,7 +130,7 @@ export function PostCard(props) {
 
 function PostItem(props) {
 
-    const { date, major, course, professor, courseRating, difficulty, homeworkLoad, takeAgain, recommend } = props.postData;
+    const {userName, date, major, course, professor, courseRating, difficulty, homeworkLoad, takeAgain, recommend } = props.postData;
     return (
         <div id='post' className="card message d-flex mb-2 fs-5">
             <div id='post' className="card-body flex-grow-1">
@@ -141,8 +141,8 @@ function PostItem(props) {
                         <p id='post' className='date-title m-0'>{date}</p>
                     </div>
 
-                    <p id='post' className='major txt m-0'>Major: {major}</p>
-                    <p id='post' className='course txt m-0'>Course: {course}</p>
+                    <p id='post' className='course txt m-0'>Name: {userName}</p>
+                    <p id='post' className='major txt m-0'>Major: {major}</p>        
                     <p id='post' className='professor txt m-0'>Professor: {professor}</p>
                     <p id='post' className='courseRating txt m-0'>Course Rating: {courseRating}</p>
                     <p id='post' className='difficulty txt m-0'>Difficulty: {difficulty}</p>
