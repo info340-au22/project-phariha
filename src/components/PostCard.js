@@ -108,8 +108,8 @@ export function PostCard(props) {
 
     return (
         <div className='container-fluid'>
-            <div className='row'>
-                    <div id="post" className='col-sm-4 col-lg-3 card text-dark mt-2 mx-2'>
+            <div id='post' className='row'>
+                    <div id="post" className='col-sm-4 col-lg-3 card text-dark fs-5'>
                         <ul className='card-body list-unstyled p-2'>
                             <p id='post' className='filter-options-title'>Filter Options</p>
                             <p id='post' className='filter-options-p'>Please select filter(s) to view content</p>
@@ -117,7 +117,8 @@ export function PostCard(props) {
                         </ul>
                     </div>
                 <div id='post' className="col-sm scrollable-pane flex-grow-1 d-inline">
-                    <div id='post' className="mt-2 mx-2">
+                    {/* post cards */}
+                    <div id='post'>
                         {postItemArray}
                         {newPostArray}
                     </div>
@@ -131,23 +132,23 @@ function PostItem(props) {
 
     const { userName, date, major, course, professor, courseRating, difficulty, homeworkLoad, takeAgain, recommend } = props.postData;
     return (
-        <div id='post' className="card message d-flex mb-2">
+        <div id='post' className="card message d-flex mb-2 fs-5">
             <div id='post' className="card-body flex-grow-1">
                 <div id='post' className='card-contents'>
 
                     <div className='card-title flex-column'>
-                        <p id='post' className="user-name m-0 col mx-2">{course}</p>
-                        <p id='post' className='date m-0'>{date}</p>
+                        <p id='post' className="course-title m-0 col mx-2">{course}</p>
+                        <p id='post' className='date-title m-0'>{date}</p>
                     </div>
 
-                    <p id='post' className='major m-0'>Major: {major}</p>
-                    <p id='post' className='course m-0'>Course: {course}</p>
-                    <p id='post' className='professor m-0'>Professor: {professor}</p>
-                    <p id='post' className='courseRating m-0'>Course Rating: {courseRating}</p>
-                    <p id='post' className='difficulty m-0'>Difficulty: {difficulty}</p>
-                    <p id='post' className='homeworkLoad m-0'>Homework Load: {homeworkLoad}</p>
-                    <p id='post' className='takeAgain m-0'>Take Again: {takeAgain}</p>
-                    <p id='post' className='recommend m-0'>Recommend: {recommend}</p>
+                    <p id='post' className='major txt m-0'>Major: {major}</p>
+                    <p id='post' className='course txt m-0'>Course: {course}</p>
+                    <p id='post' className='professor txt m-0'>Professor: {professor}</p>
+                    <p id='post' className='courseRating txt m-0'>Course Rating: {courseRating}</p>
+                    <p id='post' className='difficulty txt m-0'>Difficulty: {difficulty}</p>
+                    <p id='post' className='homeworkLoad txt m-0'>Homework Load: {homeworkLoad}</p>
+                    <p id='post' className='takeAgain txt m-0'>Take Again: {takeAgain}</p>
+                    <p id='post' className='recommend txt m-0'>Recommend: {recommend}</p>
                 </div>
             </div>
         </div>

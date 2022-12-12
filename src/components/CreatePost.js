@@ -74,7 +74,7 @@ export function CreatePost(props) {
             </form>
             <div className="submit-post mx-2 mt-3">
             <Link to="../posts">
-            <button type="button">
+            <button type="button" className='create-post'>
                 &nbsp;Create Post&nbsp;
             </button>
             </Link>
