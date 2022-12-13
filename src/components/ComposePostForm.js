@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { getDatabase, ref, set as firebaseSet, onValue, push as firebasePush } from 'firebase/database' //realtime
-import { NavLink, Navigate } from 'react-router-dom';
-import { NavLink } from 'react-bootstrap';
+
 // this component adds a post to the database 
 
 export function ComposePostForm(props) {
@@ -106,16 +105,6 @@ export function ComposePostForm(props) {
       console.log(alertP);
     }
     
-  // document.getElementById('name-required').required = true;
-  // const inputElement = document.querySelector('input');
-  // inputElement.setAttribute("required", "");
-  // inputElement.required = true;
-    //  <style>
-    //     .required:after { 
-    //         content: " *"; 
-    //         color: red;
-    //     }            
-    //   </style> 
    
     return (
       <div>
