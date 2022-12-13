@@ -497,23 +497,36 @@ button#post.sort-filter {
 }
 
 /* --------------------ComposePostForm---------------------- */
-.compost-post-header {
+
+#compose-post-header {
   text-align: center;
+  margin-top: 40px;
 }
 
 .compose-post-container {
   display: flex;
+  /* margin: 20px 0px 0px 500px; */
   margin: auto;
+  margin-top: 40px;
+  margin-bottom: 40px;
   height: auto;
   width: 500px;
   flex-direction: column;
-  place-items: center;
-  padding: 20px;
+  padding: 20px 140px;
   border-radius: 12px;
   background-color: #d0cce6;
+  /* box-shadow: 4px 4px red, -.5em .25em 1em olive; */
 }
 
 .submit-form-button {
   margin-top: 1em;
   margin-bottom: 1em;
 }
+
+.asterisk_input::after {
+  content:" *"; 
+  color: #e32;
+  font-weight: bold;
+  
+}
+

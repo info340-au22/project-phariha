@@ -104,77 +104,106 @@ export function ComposePostForm(props) {
       console.log(alertP);
     }
     
-
+  // document.getElementById('name-required').required = true;
+  // const inputElement = document.querySelector('input');
+  // inputElement.setAttribute("required", "");
+  // inputElement.required = true;
+    //  <style>
+    //     .required:after { 
+    //         content: " *"; 
+    //         color: red;
+    //     }            
+    //   </style> 
+   
     return (
-        <div className="compose-post-container">
-          <h1 className="compost-post-header">Create a Post</h1>        
-            <form className="my-2" onSubmit={handleSubmit}>
-              <div className="input-group">
-                <div className='col-9'>
-                  <label>Name:
-                    <input className ='row' type="text" onChange={handleUserName}></input>
-                  </label>
-                </div>
-                {/* <div className='col-9'>
-                    <label>Date:
-                      <input className='row' type="text" onChange={handleDate}></input>
+      <div>
+            <div id='compose-post-header'>
+              <h1 className='post-header'>Review a Course</h1>   
+            </div> 
+          <div className="compose-post-container">
+              <form className="my-2" onSubmit={handleSubmit}>
+                <div className="input-group">
+                  <div className='col-9'>
+                    <label>Name:
+                      <input className ='row required' type="text" required={true} onChange={handleUserName}></input>
                     </label>
+                  </div>
+                  {/* <div className='col-9'>
+                      <label>Date:
+                        <input className='row-required' type="text" onChange={handleDate}></input>
+                      </label>
+                  </div> */}
+                  <div className='col-9'>
+                    <label>Major:
+                      <span className="asterisk_input"></span>
+                      <input className='row required' type="text" required={true} onChange={handleMajor}></input>
+                      
+                    </label>
+                  </div>
+                  <div className='col-9'>
+                    <label>Course:
+                      <span className="asterisk_input"></span>
+                      <input className='row required' type="text" required={true} onChange={handleCourse}></input>
+                      
+                    </label>
+                  </div>
+                  <div className='col-9'>
+                      <label>Professor:
+                        <span className="asterisk_input"></span>
+                        <input className="row required" type="text" required={true} onChange={handleProfessor}></input>
+                      </label>
+                  </div>
+                  <div className='col-9'>
+                    <label>Course Ranking (1-5):
+                      <span className="asterisk_input"></span>
+                      <input className="row required" type="text" required={true} onChange={handleCourseRating}></input>
+                    </label>
+                  </div>
+                  <div className="col-9">
+                    <label>Difficulty (1-5):
+                      <span className="asterisk_input"></span>
+                      <input className="row required" type="text" required={true} onChange={handleDifficulty}></input>
+                    </label>
+                  </div>
+                  <div className="col-9">
+                    <label>Homework Load:
+                      <span className="asterisk_input"></span>
+                      <input className="row required" type="text" required={true} onChange={handleHomeworkLoad}></input>
+                    </label>
+                  </div>
+                  <div className="col-9">
+                    <label>Take Again ?:
+                      <span className="asterisk_input"></span>
+                      <input className="row required" type="text" required={true} onChange={handleTakeAgain}></input>
+                    </label>
+                  </div>
+                  <div className="col-9">
+                    <label>Recommend ?:
+                      <span className="asterisk_input"></span>
+                      <input className="row required" type="text" required={true} onChange={handleRecommend}></input>
+                    </label>
+                  </div>
+                </div>
+                
+                <button className='submit-form-button row compose-form btn btn-secondary' type='submit' disabled={false} onClick={successMessage}>Submit</button> 
+                <p className="d-none">You succesfully created a post! Return to Posts page to view your contribution.</p>
+                {/* <div className="submit-post mx-2 mt-3">
+                    <Link to="../posts">
+                    <button type="submit" className='row-required compose-form btn btn-secondary' disabled={false}>
+                        &nbsp;Submit&nbsp;
+                    </button>
+                    </Link>
                 </div> */}
-                <div className='col-9'>
-                  <label>Major:
-                    <input className='row' type="text" onChange={handleMajor}></input>
-                  </label>
-                </div>
-                <div className='col-9'>
-                  <label>Course:
-                    <input className='row' type="text" onChange={handleCourse}></input>
-                  </label>
-                </div>
-                <div className='col-9'>
-                    <label>Professor:
-                      <input className="row" type="text" onChange={handleProfessor}></input>
-                    </label>
-                </div>
-                <div className='col-9'>
-                  <label>Course Ranking (1-5):
-                    <input className="row" type="text" onChange={handleCourseRating}></input>
-                  </label>
-                </div>
-                <div className="col-9">
-                  <label>Difficulty (1-5):
-                    <input className="row" type="text" onChange={handleDifficulty}></input>
-                  </label>
-                </div>
-                <div className="col-9">
-                  <label>Homework Load:
-                    <input className="row" type="text" onChange={handleHomeworkLoad}></input>
-                  </label>
-                </div>
-                <div className="col-9">
-                  <label>Take Again ?:
-                    <input className="row" type="text" onChange={handleTakeAgain}></input>
-                  </label>
-                </div>
-                <div className="col-9">
-                  <label>Recommend ?:
-                    <input className="row" type="text" onChange={handleRecommend}></input>
-                  </label>
-                </div>
-              </div>
-              
-              <button className='submit-form-button row compose-form btn btn-secondary' type='submit' disabled={false} onClick={successMessage}>Submit</button> 
-              <p className="d-none">You succesfully created a post! Return to Posts page to view your contribution.</p>
-              {/* <div className="submit-post mx-2 mt-3">
-                  <Link to="../posts">
-                  <button type="submit" className='row compose-form btn btn-secondary' disabled={false}>
-                      &nbsp;Submit&nbsp;
-                  </button>
-                  </Link>
-              </div> */}
-              
-            </form>
+                
+              </form>
+        
+          </div>
         </div>
       );
 
 
 }
+
+
+
+// use Navigate function 

@@ -26,6 +26,10 @@ export function PostCard(props) {
                 }
 
             })
+            // ** Notes from office hours**
+            // save filter criteria in state
+            // then in rendering behavior, outside of event handling, do filtering work 
+            // filtering happens when component renders
 
         } else {
             clickedOptions.map((option) => {
@@ -48,6 +52,8 @@ export function PostCard(props) {
                 }
 
             });
+
+            
 
             setDisplayedPosts([]);
             currData.map((option) => {
