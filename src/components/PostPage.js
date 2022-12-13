@@ -1,10 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import { NavBar } from './NavBar';
-import { CreatePost } from './CreatePost';
 import { PostCard } from './PostCard';
-import { Link, NavLink } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import '../index.css';
-import { ComposePostForm } from './ComposePostForm';
 import { getDatabase, ref, set as firebaseSet, onValue, push as firebasePush } from 'firebase/database' //realtime
 
 

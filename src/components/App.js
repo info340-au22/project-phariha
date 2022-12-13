@@ -7,7 +7,6 @@ import { HomePage } from './Homepage';
 import { NavBar } from './NavBar';
 import { Footer } from './Footer';
 import { Routes, Route, Navigate } from 'react-router-dom';
-import { CreatePost } from './CreatePost';
 import { ComposePostForm } from './ComposePostForm';
 import '../index.css';
 
