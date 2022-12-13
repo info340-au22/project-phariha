@@ -16,7 +16,7 @@ import '../index.css';
     };
 
     const WIT_cards = [
-        { pic: 'img/BWIT.PNG', title: "Tiffany Snyder", text: "UW graduate 2015, PH.D Alum", content: "This website helped me figure out which prerequisite classes I needed to take for the major I was applying to! I originally didn't know that the Informatics major only had 4 prerequisite courses and this website helped me navigate through the application process smoothly."},
+        { pic: 'img/maria-raga.jpg', title: "Maria Raga", text: "UW graduate 2015, PH.D Alum", content: "This website helped me figure out which prerequisite classes I needed to take for the major I was applying to! I originally didn't know that the Informatics major only had 4 prerequisite courses and this website helped me navigate through the application process smoothly."},
         { pic: 'img/ellen-pao.jpg', title: 'Ellen Pao', text: "UW graduate 2017, MLIS", content: "This site was easy to navigate and has all the resources you need! Features include the ability to search and filter through the University of Washington\'s majors based on areas of interest or classes of interest. Students are able to view reviews other students have posted about classes and create review posts themselves!" },
         { pic: 'img/tanya_menendez.jpg', title: "Tanya Menendez", text: "UW graduate 2019, MSIM", content: "Coming into freshman year, I didn’t know what classes to take when applying to my major. All the information on applying to my major was on various sites and sometimes hard to find. I appreciate this site for storing all the information I needed when applying to my major in one place. It made my application process a lot smoother." }
     ];
