@@ -530,3 +530,9 @@ button#post.sort-filter {
   
 }
 
+@media (max-width:700px) {
+  .compose-post-container {
+    width: 100%;
+  }
+  
+}
