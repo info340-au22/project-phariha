@@ -494,6 +494,7 @@ button#post.sort-filter {
   a.postbutton {
       margin-left: 2rem;
   }
+
 }
 
 /* --------------------ComposePostForm---------------------- */
@@ -512,7 +513,7 @@ button#post.sort-filter {
   height: auto;
   width: 500px;
   flex-direction: column;
-  padding: 20px 140px;
+  padding: 20px 70px;
   border-radius: 12px;
   background-color: #d0cce6;
   /* box-shadow: 4px 4px red, -.5em .25em 1em olive; */
@@ -527,6 +528,13 @@ button#post.sort-filter {
   content:" *"; 
   color: #e32;
   font-weight: bold;
+  
+}
+
+@media (max-width:700px) {
+  .compose-post-container {
+    width: 100%;
+  }
   
 }
 

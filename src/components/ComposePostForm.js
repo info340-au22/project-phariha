@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { getDatabase, ref, set as firebaseSet, onValue, push as firebasePush } from 'firebase/database' //realtime
-import { Link } from 'react-router-dom';
+import { Link, Navigate } from 'react-router-dom';
+import { NavLink } from 'react-bootstrap';
 // this component adds a post to the database 
 
 export function ComposePostForm(props) {
@@ -104,19 +105,10 @@ export function ComposePostForm(props) {
       console.log(alertP);
     }
     
-  // document.getElementById('name-required').required = true;
-  // const inputElement = document.querySelector('input');
-  // inputElement.setAttribute("required", "");
-  // inputElement.required = true;
-    //  <style>
-    //     .required:after { 
-    //         content: " *"; 
-    //         color: red;
-    //     }            
-    //   </style> 
+    
    
     return (
-      <div>
+      <div id="compose-post">
             <div id='compose-post-header'>
               <h1 className='post-header'>Review a Course</h1>   
             </div> 
@@ -172,20 +164,22 @@ export function ComposePostForm(props) {
                     </label>
                   </div>
                   <div className="col-9">
-                    <label>Take Again ?:
+                    <label>Would you take this course again?
                       <span className="asterisk_input"></span>
                       <input className="row required" type="text" required={true} onChange={handleTakeAgain}></input>
                     </label>
                   </div>
                   <div className="col-9">
-                    <label>Recommend ?:
+                    <label>Would you recommend this course?
                       <span className="asterisk_input"></span>
                       <input className="row required" type="text" required={true} onChange={handleRecommend}></input>
                     </label>
                   </div>
                 </div>
                 
-                <button className='submit-form-button row compose-form btn btn-secondary' type='submit' disabled={false} onClick={successMessage}>Submit</button> 
+               <div>
+                <button className='submit-form-button row compose-form btn btn-secondary' type='submit' disabled={false} onClick={successMessage}>Submit</button>
+               </div>  
                 <p className="d-none">You succesfully created a post! Return to Posts page to view your contribution.</p>
                 {/* <div className="submit-post mx-2 mt-3">
                     <Link to="../posts">
@@ -193,8 +187,7 @@ export function ComposePostForm(props) {
                         &nbsp;Submit&nbsp;
                     </button>
                     </Link>
-                </div> */}
-                
+                </div> */}   
               </form>
         
           </div>
@@ -204,6 +197,3 @@ export function ComposePostForm(props) {
 
 }
 
-
-
-// use Navigate function 

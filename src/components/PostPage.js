@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { NavBar } from './NavBar';
 import { CreatePost } from './CreatePost';
 import { PostCard } from './PostCard';
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import '../index.css';
 import { ComposePostForm } from './ComposePostForm';
 import { getDatabase, ref, set as firebaseSet, onValue, push as firebasePush } from 'firebase/database' //realtime
@@ -45,7 +45,7 @@ export function PostPage(props) {
         <div className='post-page'>
             
             <div className='d-flex d-inline sort-filter'>
-                <Link to="/ComposePostForm" className="postbutton btn">&nbsp;Create New Post&nbsp;</Link>
+                <NavLink to="/ComposePostForm" className="postbutton btn">&nbsp;Create New Post&nbsp;</NavLink>
             </div>
            
             <div className=''>
